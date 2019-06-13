@@ -1,16 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://finyorko.com/title.html</loc>
+    <loc>https://finyorko.com/3.html</loc>
     <lastmod>2019-06-13</lastmod>
   </url>  <url>
-    <loc>https://finyorko.com/title.html</loc>
+    <loc>https://finyorko.com/2.html</loc>
     <lastmod>2019-06-13</lastmod>
   </url>  <url>
-    <loc>https://finyorko.com/title.html</loc>
-    <lastmod>2019-06-13</lastmod>
-  </url>  <url>
-    <loc>https://finyorko.com/title.html</loc>
+    <loc>https://finyorko.com/1.html</loc>
     <lastmod>2019-06-13</lastmod>
   </url>
 </urlset>
