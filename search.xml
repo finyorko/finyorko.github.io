@@ -3,7 +3,7 @@
   <entry>
     <title><![CDATA[微信防撤回脚本]]></title>
     <url>%2F3.html</url>
-    <content type="text"><![CDATA[Windows微信防撤回脚本 测试版本：2.6.7.57 ~ 2.6.8.51 下载地址：https://pan.baiduwp.com/s/1UBpRXRyd9uXBeqDbc0DKWg 提取码: 6666 使用方法：将下载的dll文件，放置在微信的安装目录（WeChat.exe所在目录）下，默认安装目录（C:\Program Files(x86)\Tencent\WeChat），如果在安装微信时，自定义了微信安装位置，请自行查找。（如果有问题，右下角蓝色聊天框戳我） 测试结果：]]></content>
+    <content type="text"><![CDATA[Windows微信防撤回脚本 测试版本：2.6.7.57 ~ 2.6.8.51 下载地址：https://pan.baiduwp.com/s/1UBpRXRyd9uXBeqDbc0DKWg 提取码: 6666 使用方法：将下载的dll文件，放置在微信的安装目录（WeChat.exe所在目录）下，默认安装目录（C:\Program Files(x86)\Tencent\WeChat），如果在安装微信时，自定义了微信安装位置，请自行查找。（如果有问题，右下角蓝色聊天框戳我） 测试结果： 组件制作过程 使用工具：x32dbg调试器 操作过程：1.打开微信，并登录； ​ 2.打开x32dbg，文件-附加-选择“微信”，如下图； ​ ​ ​ 3.符号-搜索关键词：“win”，选择wechatwin.dll模块，然后双击 ​ 跳转至“引用”区域 ； ​ ​ 4.右键搜索-当前模块-字符串，输入搜索关键次“revokemsg”， ​ 选择 mov.ecx.wechatwin.xxxxxx 字段结果，双击定位至详情 ​ ​ ​ 5.从定位直至上拉，第一个je开头行，修改成jmp开头行，点确定 ​]]></content>
   </entry>
   <entry>
     <title><![CDATA[网页下载百度云文件]]></title>
