@@ -1,6 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>https://finyorko.top/learngit.html</loc>
+    <lastmod>2019-11-21</lastmod>
+  </url>  <url>
+    <loc>https://finyorko.top/new&malloc.html</loc>
+    <lastmod>2019-11-11</lastmod>
+  </url>  <url>
     <loc>https://finyorko.top/offer_dir.html</loc>
     <lastmod>2019-11-06</lastmod>
   </url>  <url>
@@ -8,9 +14,6 @@
     <lastmod>2019-11-06</lastmod>
   </url>  <url>
     <loc>https://finyorko.top/sort.html</loc>
-    <lastmod>2019-10-31</lastmod>
-  </url>  <url>
-    <loc>https://finyorko.top/new&malloc.html</loc>
     <lastmod>2019-10-31</lastmod>
   </url>  <url>
     <loc>https://finyorko.top/3.html</loc>
