@@ -1,0 +1,2353 @@
+<!DOCTYPE html>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+<html class="theme-next gemini use-motion" lang="zh-CN">
+<head><meta name="generator" content="Hexo 3.8.0">
+  <meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2">
+<meta name="theme-color" content="#222">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  
+  <link rel="stylesheet" href="/lib/fancybox/source/jquery.fancybox.css">
+
+
+
+
+
+
+
+<link rel="stylesheet" href="/lib/font-awesome/css/font-awesome.min.css?v=4.6.2">
+
+<link rel="stylesheet" href="/css/main.css?v=7.1.2">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/apple-touch-icon-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon-32x32-next.png?v=7.1.2">
+
+
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon-16x16-next.png?v=7.1.2">
+
+
+  <link rel="mask-icon" href="/images/logo.svg?v=7.1.2" color="#222">
+
+
+
+
+
+
+
+<script id="hexo.configurations">
+  var NexT = window.NexT || {};
+  var CONFIG = {
+    root: '/',
+    scheme: 'Gemini',
+    version: '7.1.2',
+    sidebar: {"position":"left","display":"post","offset":12,"onmobile":false,"dimmer":false},
+    back2top: true,
+    back2top_sidebar: false,
+    fancybox: true,
+    fastclick: false,
+    lazyload: false,
+    tabs: true,
+    motion: {"enable":true,"async":false,"transition":{"post_block":"fadeIn","post_header":"slideDownIn","post_body":"slideDownIn","coll_header":"slideLeftIn","sidebar":"slideUpIn"}},
+    algolia: {
+      applicationID: '',
+      apiKey: '',
+      indexName: '',
+      hits: {"per_page":10},
+      labels: {"input_placeholder":"Search for Posts","hits_empty":"We didn't find any results for the search: ${query}","hits_stats":"${hits} results found in ${time} ms"}
+    }
+  };
+</script>
+
+
+  
+
+
+
+
+
+
+  <script>
+  (function(i,s,o,g,r,a,m){i["DaoVoiceObject"]=r;i[r]=i[r]||function(){(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;a.charset="utf-8";m.parentNode.insertBefore(a,m)})(window,document,"script",('https:' == document.location.protocol ? 'https:' : 'http:') + "//widget.daovoice.io/widget/0f81ff2f.js","daovoice")
+  daovoice('init', {
+      app_id: "ba38a684"
+    });
+  daovoice('update');
+  </script>
+
+
+
+  <meta name="description" content="计算机网络刷书整理">
+<meta name="keywords" content="-网络">
+<meta property="og:type" content="article">
+<meta property="og:title" content="network">
+<meta property="og:url" content="https://finyorko.top/network.html">
+<meta property="og:site_name" content="finyorko&#39;s Blog">
+<meta property="og:description" content="计算机网络刷书整理">
+<meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/13/QgUHg0.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/13/QgvUYT.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/13/Q2pA9f.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/14/Q2bQvn.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/14/Q2LEtS.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/17/Qox10K.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/17/Qox3TO.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/18/QT2s6s.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/18/QTWdzQ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/18/QT7TPI.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/18/QTqQbD.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/18/Q7rZDK.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/18/Q7Rpss.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/18/QHl9js.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/18/QHatoj.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/19/Qq8xII.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/19/QqNNHe.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/19/QqwuKx.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/19/Qq2Mp8.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/19/QLP6Qf.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/19/QLeTqx.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/20/QXZncd.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lCcy9g.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lCIr4I.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lCbn0S.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPVAaQ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPepB8.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPMAOI.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPMk6A.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lP39HI.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lP8HfK.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPJ2qJ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPJqqH.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPNWZQ.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPafCn.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPB0Ig.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPrqUO.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/24/lPrbVK.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/25/lilwDA.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/25/liJI9P.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/25/liOh9g.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/25/lF9o79.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/25/lFPQVH.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/25/lFPfZ4.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/25/lFitYR.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/26/lkhPNd.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/26/lkbHEV.png">
+<meta property="og:image" content="https://s2.ax1x.com/2019/12/26/lkO0c4.png">
+<meta property="og:updated_time" content="2020-03-20T02:34:18.178Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="network">
+<meta name="twitter:description" content="计算机网络刷书整理">
+<meta name="twitter:image" content="https://s2.ax1x.com/2019/12/13/QgUHg0.png">
+
+
+
+
+
+  
+  
+  <link rel="canonical" href="https://finyorko.top/network">
+
+
+
+<script id="page.configurations">
+  CONFIG.page = {
+    sidebar: "",
+  };
+</script>
+
+  <title>network | finyorko's Blog</title>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+  <noscript>
+  <style>
+  .use-motion .motion-element,
+  .use-motion .brand,
+  .use-motion .menu-item,
+  .sidebar-inner,
+  .use-motion .post-block,
+  .use-motion .pagination,
+  .use-motion .comments,
+  .use-motion .post-header,
+  .use-motion .post-body,
+  .use-motion .collection-title { opacity: initial; }
+
+  .use-motion .logo,
+  .use-motion .site-title,
+  .use-motion .site-subtitle {
+    opacity: initial;
+    top: initial;
+  }
+
+  .use-motion .logo-line-before i { left: initial; }
+  .use-motion .logo-line-after i { right: initial; }
+  </style>
+</noscript>
+
+</head>
+
+<body itemscope itemtype="http://schema.org/WebPage" lang="zh-CN">
+
+  
+  
+    
+  
+
+  <div class="container sidebar-position-left page-post-detail">
+    <div class="headband"></div>
+    <!--Github-start-->
+    <!--多余了,next的主题配置文件里有github_banner
+    <a href="https://github.com/finyorko" class="github-corner" aria-label="View source on GitHub"><svg width="80" height="80" viewBox="0 0 250 250" style="fill:#151513; color:#fff; position: absolute; top: 0; border: 0; right: 0;" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"></path></svg></a><style>.github-corner:hover .octo-arm{animation:octocat-wave 560ms ease-in-out}@keyframes octocat-wave{0%,100%{transform:rotate(0)}20%,60%{transform:rotate(-25deg)}40%,80%{transform:rotate(10deg)}}@media (max-width:500px){.github-corner:hover .octo-arm{animation:none}.github-corner .octo-arm{animation:octocat-wave 560ms ease-in-out}}</style>
+    -->
+    <!--GitHub-end-->
+    <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
+      <div class="header-inner"><div class="site-brand-wrapper">
+  <div class="site-meta">
+    
+
+    <div class="custom-logo-site-title">
+      <a href="/" class="brand" rel="start">
+        <span class="logo-line-before"><i></i></span>
+        <span class="site-title">finyorko's Blog</span>
+        <span class="logo-line-after"><i></i></span>
+      </a>
+    </div>
+    
+    
+  </div>
+
+  <div class="site-nav-toggle">
+    <button aria-label="切换导航栏">
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+      <span class="btn-bar"></span>
+    </button>
+  </div>
+</div>
+
+
+
+<nav class="site-nav">
+  
+    <ul id="menu" class="menu">
+      
+        
+        
+        
+          
+          <li class="menu-item menu-item-home">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/" rel="section"><i class="menu-item-icon fa fa-fw fa-home"></i> <br>首页</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-about">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/about/" rel="section"><i class="menu-item-icon fa fa-fw fa-user"></i> <br>关于</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-tags">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/tags/" rel="section"><i class="menu-item-icon fa fa-fw fa-tags"></i> <br>标签</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-categories">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/categories/" rel="section"><i class="menu-item-icon fa fa-fw fa-th"></i> <br>分类</a>
+
+  </li>
+        
+        
+        
+          
+          <li class="menu-item menu-item-archives">
+
+    
+    
+    
+      
+    
+
+    
+
+    <a href="/archives/" rel="section"><i class="menu-item-icon fa fa-fw fa-archive"></i> <br>归档</a>
+
+  </li>
+
+      
+      
+        <li class="menu-item menu-item-search">
+          
+            <a href="javascript:;" class="popup-trigger">
+          
+            
+              <i class="menu-item-icon fa fa-search fa-fw"></i> <br>搜索</a>
+        </li>
+      
+    </ul>
+  
+
+  
+
+  
+    <div class="site-search">
+      
+  <div class="popup search-popup local-search-popup">
+  <div class="local-search-header clearfix">
+    <span class="search-icon">
+      <i class="fa fa-search"></i>
+    </span>
+    <span class="popup-btn-close">
+      <i class="fa fa-times-circle"></i>
+    </span>
+    <div class="local-search-input-wrapper">
+      <input autocomplete="off" placeholder="搜索..." spellcheck="false" type="text" id="local-search-input">
+    </div>
+  </div>
+  <div id="local-search-result"></div>
+</div>
+
+
+
+    </div>
+  
+</nav>
+
+
+
+  
+
+<!-- 天气 -->
+<!--
+<script type="text/javascript">
+WIDGET = {FID: 'lXulKZ174m'}
+</script>
+<script type="text/javascript" src="https://apip.weatherdt.com/float/static/js/r.js?v=1111"></script>
+-->
+</div>
+    </header>
+
+    
+  
+  
+
+  
+
+  <a href="https://github.com/finyorko" class="github-corner" title="Follow me on GitHub" aria-label="Follow me on GitHub" rel="noopener" target="_blank"><svg width="80" height="80" viewbox="0 0 250 250" aria-hidden="true"><path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"/><path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2" fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"/><path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z" fill="currentColor" class="octo-body"/></svg></a>
+
+
+
+    <main id="main" class="main">
+      <div class="main-inner">
+        <div class="content-wrap">
+          
+            
+
+          
+          <div id="content" class="content">
+            
+
+  <div id="posts" class="posts-expand">
+    
+
+  
+
+  
+  
+  
+
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="https://finyorko.top/network.html">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="冯宇康">
+      <meta itemprop="description" content="起步晚，抓紧学，加油干！">
+      <meta itemprop="image" content="/images/avatar.png">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="finyorko's Blog">
+    </span>
+
+    
+      <header class="post-header">
+
+        
+        
+          <h1 class="post-title" itemprop="name headline">network
+
+              
+            
+          </h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+
+            
+            
+            
+
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">发表于</span>
+              
+
+              
+                
+              
+
+              <time title="创建时间：2020-03-20 10:32:31 / 修改时间：10:34:18" itemprop="dateCreated datePublished" datetime="2020-03-20T10:32:31+08:00">2020-03-20</time>
+            
+
+            
+              
+
+              
+            
+          </span>
+
+          
+            <span class="post-category">
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">分类于</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing"><a href="/categories/计算机基础知识/" itemprop="url" rel="index"><span itemprop="name">-计算机基础知识</span></a></span>
+
+                
+                
+              
+            </span>
+          
+
+          
+            
+            
+              
+              <span class="post-comments-count">
+                <span class="post-meta-divider">|</span>
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-comment-o"></i>
+                </span>
+            
+                <span class="post-meta-item-text">评论数：</span>
+                <a href="/network.html#comments" itemprop="discussionUrl">
+                  <span class="post-comments-count valine-comment-count" data-xid="/network.html" itemprop="commentCount"></span>
+                </a>
+              </span>
+            
+          
+
+          
+          
+
+          
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
+
+          
+            <div class="post-symbolscount">
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-file-word-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">本文字数：</span>
+                
+                <span title="本文字数">46k</span>
+              
+
+              
+                <span class="post-meta-divider">|</span>
+              
+
+              
+                <span class="post-meta-item-icon">
+                  <i class="fa fa-clock-o"></i>
+                </span>
+                
+                  <span class="post-meta-item-text">阅读时长 &asymp;</span>
+                
+                <span title="阅读时长">2:32</span>
+              
+            </div>
+          
+
+          
+            <div class="post-description">计算机网络刷书整理</div>
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h1 id="计算机网络-自顶向下方法"><a href="#计算机网络-自顶向下方法" class="headerlink" title="计算机网络-自顶向下方法"></a>计算机网络-自顶向下方法</h1><h1 id="第一章-计算机网络和因特网"><a href="#第一章-计算机网络和因特网" class="headerlink" title="第一章　计算机网络和因特网"></a>第一章　计算机网络和因特网</h1><h2 id="什么是因特网"><a href="#什么是因特网" class="headerlink" title="什么是因特网"></a>什么是因特网</h2><p>因特网描述方式有两种：</p>
+<ol>
+<li>描述因特网具体构成：构成因特网的硬件和软件。</li>
+<li>分布式应用提供服务的网络基础设施。</li>
+</ol>
+<h3 id="具体构成描述"><a href="#具体构成描述" class="headerlink" title="具体构成描述"></a>具体构成描述</h3><p><a href="https://s2.ax1x.com/2019/12/13/QgUHg0.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/13/QgUHg0.png" alt="组成"></a></p>
+<p>主机（host）：与因特网相连的计算机等设备，也称为端系统（end system）。</p>
+<p>端系统通过通信链路（communication link）和分组交换机（packet switch）连接到一起。</p>
+<p>通信链路由不同类型的物理媒介组成，链路传播速度以bps度量。</p>
+<p>分组：当一个端系统向另一个端系统发送时发送端系统将数据进行分段，并为每段加上首部字节，由此形成的信息包被称为分组，这些分组通过网络发送到目的端系统，在那里被装成初始数据。</p>
+<p>分组交换机从它的一条入通信链路接收达到的分组，并从它的一条出通信链路转发该分组。当前最主要的两种分组交换机是路由器（router）和链路层交换机（link-layer switch）。</p>
+<p>路径：从发送端到接收端，一个分组所经历的一系列通信链路和分组交换机称为通过该网络的路径。</p>
+<p>端系统通过因特网服务提供商（Internet Service Provider，ISP）接入因特网。每个ISP是一个由多个分组交换机和多段通信链路组成的网络。不同的ISP为端系统提供了各种不同类型的网络接入（各种调制解调器、高速局域网接入和无线接入）。底层ISP通过高层ISP互联。每个ISP独立管理，运行IP协议。</p>
+<p>端系统、分组交换机和其他因特网部件都要运行控制中接收和发送信息的一系列协议。TCP（Transmission Control Protocol，传输控制协议）和IP（Internet Protocol，网际协议）是因特网中最重要的两个协议。IP协议定义了在路由器和端系统中发送和接受的分组的格式。因特网主要协议统称为TCP/IP。</p>
+<p>公共因特网：特定网络，因特网。网络的网络，即将网络连接起来的网络。</p>
+<p>内联网：专用网络，这些网络内的主机不能与专用网络外部的主机交换信息（除非这些信息通过了所谓的防火墙，否则防火墙一般会限制报文进入和流出网络）。</p>
+<h3 id="服务描述"><a href="#服务描述" class="headerlink" title="服务描述"></a>服务描述</h3><p>分布式应用程序：涉及多台相互交换数据的端系统的程序。因特网应用程序运行在端系统上，即它们并不在网路核心的分组交换机上。</p>
+<p>与因特网相连的端系统提供了一个应用编程接口（Application Programming Interface，API），API规定了运行在一个端系统上的软件请求因特网基础设施向另一个端系统上的特定目的地软件交付数据的方式。因特网是一种基础设施，新应用程序正在其上不断地被发明和设置。</p>
+<h3 id="什么是协议"><a href="#什么是协议" class="headerlink" title="什么是协议"></a>什么是协议</h3><p>网路协议类似于人类协议，不过交换报文和采取行动的是某些设备的硬件或软件组件。因特网的所有活动，凡是涉及两个或多个通信的远程实体都受协议限制。</p>
+<p>一个协议定义了两个或多个通信实体之间交换的报文格式和次序，以及在报文传输或接收或其他事件方面所采取的动作。</p>
+<h2 id="网络边缘"><a href="#网络边缘" class="headerlink" title="网络边缘"></a>网络边缘</h2><p>端系统位于网络的边缘。端系统包括桌面计算机、服务器和移动计算机，还包括越来越多的其他类型设备。主机=端系统。主机又被分为客户机和服务器。</p>
+<h3 id="客户机和服务器程序"><a href="#客户机和服务器程序" class="headerlink" title="客户机和服务器程序"></a>客户机和服务器程序</h3><p>客户程序运行在一个端系统上，它发出请求，并从运行在另一个端系统的服务器程序接收服务。客户机-服务器应用程序是分布式应用程序，客户机和服务器通过因特网护发报文以交互。</p>
+<p>对等（P2P）应用程序：用户端程序起着客户机程序和服务器程序的双重作用。当它向一个对等方请求文件时，起着客户机的作用，向另一个对等方发送文件时起着服务器的作用。</p>
+<h3 id="接入网"><a href="#接入网" class="headerlink" title="接入网"></a>接入网</h3><p>接入网：端系统连接到其边缘路由器的物理链路。边缘路由器是端系统到任何其他远程端系统的路径上第一个路由器。</p>
+<p>住宅接入：拨号调制解调器。</p>
+<p>公司接入：局域网（LAN）。</p>
+<p>无线接入：无线局域网（wireless LAN），广域无线网（wide-area wireless access network）。</p>
+<h3 id="物理媒介"><a href="#物理媒介" class="headerlink" title="物理媒介"></a>物理媒介</h3><p>导引型媒体：电波沿着固体媒体被传导：</p>
+<ol>
+<li>双绞铜线</li>
+<li>同轴电缆</li>
+<li>光钎</li>
+</ol>
+<p>非导引型媒体：电波在空气或外层空间中传播：</p>
+<ol>
+<li>陆地无线电信道</li>
+<li>卫星无线电信道</li>
+</ol>
+<h2 id="网络核心"><a href="#网络核心" class="headerlink" title="网络核心"></a>网络核心</h2><p>网路核心：因特网端系统的分组交换机和链路的网状结构。</p>
+<h3 id="电路交换和分组交换"><a href="#电路交换和分组交换" class="headerlink" title="电路交换和分组交换"></a>电路交换和分组交换</h3><p>通过网络链路和交换机移动数据有两种基本方法：电路交换和分组交换。</p>
+<p>电路交换中，沿着端系统通信路径，为端系统之间通信所提供的资源（缓存、链路传输速率）在通信会话期间会被预留。代表为电话网络。</p>
+<p>分组交换网络中，这些资源不会被预留；会话的报文按需使用这些资源，这将导致可能不得不等待（排队）接入通信线路。代表为互联网。</p>
+<h4 id="电路交换网络中的多路复用"><a href="#电路交换网络中的多路复用" class="headerlink" title="电路交换网络中的多路复用"></a>电路交换网络中的多路复用</h4><p>链路中的网络要实现多路复用（使得一条线路可以有多条连接）有两种方式：</p>
+<ol>
+<li>频分多路复用（Frequency-Division Multiplexing，FDM）：链路的频谱由跨越链路创建的所有连接所共享。特别是，该链路在连续期间为每条连接专用一个频段。在电话网络中，这个频段通常是4kHz，该频段被称为带宽。调频无线电台也使用FDM来共享88~108MHZ的频谱，其中为每一个电台被分配一个特定的频带。</li>
+<li>时分多路复用（Time-Division Multiplexing，TDM）：时间被划分为固定区间的帧，每帧又被划分为固定数量的时隙。当网络跨越一条链路创建一条连接时，该网络在每个帧中为该连接指定一个时隙。这些时隙专门由该连接单独使用，一个时隙可用于传输该连接（在每个帧内）的数据。</li>
+</ol>
+<p>电路交换缺点：</p>
+<ol>
+<li>效率低，因为在静默期专用电路空闲，不能被其他进行中的连接所使用。</li>
+<li>创建端到端电路和预留端到端带宽是很复杂的，需要复杂的信令软件来协调沿端到端路径的交换机的操作。</li>
+</ol>
+<h4 id="分组交换"><a href="#分组交换" class="headerlink" title="分组交换"></a>分组交换</h4><p>源主机将长报文划分为较小的数据块，并称之为分组。在源和目的之间，这些分组中的每个都通过通信链路的分组交换机（路由器和链路层交换机）传送。</p>
+<p><strong>存储转发机制</strong>（store-and-forward transmission）：交换机能够开始向输出链路传输该分组的第一个比特之前，必须接收到整个分组。因此，存储转发式分组交换机沿着该分组的路径在每条链路的输入端引入存储转发时延。</p>
+<p><strong>输出缓存</strong>（output buffer）（也称输出队列（output queue））：每个分组交换机有多条链路与之相连，对于每一条相连的链路，该分组交换机具有一个输出缓存，它用于存储路由器准备发往那条链路的分组。如果到达的分组需要跨越链路传输，但发现该链路忙于其他分组，该到达分组必须在输出缓存中等待。因此除了存储转发时延以外，分组还要承受输出缓存的<strong>排队时延</strong>（queue delay）。由于缓存区大小有限，因此一个到达的分组可能发现该缓存被等待传输的分组完全占满了，此时将出现<strong>分组丢失</strong>或<strong>丢包</strong>（packet lost）——可能是到达的该分组也可能是已经排队的分组之一将被丢弃。</p>
+<p><a href="https://s2.ax1x.com/2019/12/13/QgvUYT.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/13/QgvUYT.png" alt="store-and-forward"></a></p>
+<p>分组交换的缺点：其端到端时延是变动的和不可预测的（主要是因为排队时延的变动和不可预测），因此不适合实时服务（如电话）。</p>
+<p>分组交换的优点：</p>
+<ol>
+<li>提供了比电路交换更好的带宽。</li>
+<li>以电路交换更简单、更有效，实现成本更低。</li>
+</ol>
+<p>统计多路复用：按需共享资源。</p>
+<h3 id="分组如何通过分组交换形成其通路"><a href="#分组如何通过分组交换形成其通路" class="headerlink" title="分组如何通过分组交换形成其通路"></a>分组如何通过分组交换形成其通路</h3><p>在因特网中，每个通过该网络传输的分组在它的首部包含了其目的地地址，该地址是一种层次结构。当分组到达网络中的一台路由器时，该路由器检查分组的目的地地址的一部分，并向相邻路由器转发该分组。更特别的，每台路由器具有一个转发表，用于将目的地地址（或其中一部分）映射到输出链路。当分组到达一台路由器时，该路由器检查目的的地址，并用这个目的的地址搜索转发表，以找到合适的输出链路。然后路由器将该分组导向输出链路。</p>
+<h3 id="ISP和因特网主干道"><a href="#ISP和因特网主干道" class="headerlink" title="ISP和因特网主干道"></a>ISP和因特网主干道</h3><p>第一层ISP的特性：</p>
+<ol>
+<li>直接与其他每个第一层ISP相连。</li>
+<li>与大量的第二层ISP和其他客户网络相连。</li>
+<li>覆盖国际区域。</li>
+</ol>
+<p>第一层ISP也被称为因特网主干道。第二层ISP通常具有区域性或国家线覆盖规模，并且非常重要的只与少数第一层ISP相连接。第二层ISP需要引导流量通过它所连接的第一层ISP。第二层ISP被他所连接的第一层ISP称为客户，第一层ISP是第二层ISP的供应商。第二层之下是较低层ISP，层次结构的底层是接入ISP。当两个ISP直接相连时，他们被称为是对等的。</p>
+<p>一个ISP网络中，某ISP与其他ISP的连接点被称为汇集点（Point of Presence，POP）。POP就是某ISP中的一台或多台路由器组，通过他们能够与其他ISP的路由器连接。</p>
+<h2 id="分组交换网中的时延、丢包和吞吐量"><a href="#分组交换网中的时延、丢包和吞吐量" class="headerlink" title="分组交换网中的时延、丢包和吞吐量"></a>分组交换网中的时延、丢包和吞吐量</h2><h3 id="时延概述"><a href="#时延概述" class="headerlink" title="时延概述"></a>时延概述</h3><p>分组从一个节点（主机或路由器）沿着路径到后继节点（主机或路由器）时，该节点在沿途的每个节点都经受了几种不同的时延。主要包括：<strong>节点处理时延</strong>（nodal processing delay）、<strong>排队时延</strong>（queuing delay）、<strong>传输时延</strong>（Transmission delay）和<strong>传播时延</strong>（propagation delay），这些时延总体累加起来是<strong>节点总时延</strong>（total delay）。</p>
+<p><a href="https://s2.ax1x.com/2019/12/13/Q2pA9f.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/13/Q2pA9f.png" alt="delay"></a></p>
+<p>处理时延：检测分组首部和决定将该分组导向何处所需时间是处理时延的主要部分。一般处理时延较短（微秒级或者更低）。</p>
+<p>排队时延：在队列中，当分组在链路上等待传输时，经受排队时延。队列很空且没有其他分组在传输时，排队时延是0。流量很大时，排队时延就会比较大。实际排队时延在毫秒到微秒级。</p>
+<p>传输时延：仅当分组的整体全部导到时，才能传输我们的分组。L表示分组的比特长度，R bps表示从路由器A到路由器B的传输速率。传输时延是L/R，即将所以比特推（传输）向链路所需要的时间。实际传输时延在好秒到微妙级。</p>
+<p>传播时延：从该链路的起点到路由器B传播所需要的时间是传播时延。比特以该链路的传播速率传播。其速率范围是2<em>10^8 ~ 3</em>10^8，传播时延等于路由器间的距离除以传播速度。</p>
+<p>传输时延是路由器将分组推出所需要的时间，它是分组长度和链路传输速度的函数，而于传输距离无关。传播时延是一个比特从一台路由器向另一台路由器传播所需要的时间，是距离的函数，与分组长度或链路的传输速度无关。<br>$$<br>d_{nodal} = d_{proc}+d_{queue}+d_{trans}+d_{prop}<br>$$</p>
+<h3 id="排队时延和丢包"><a href="#排队时延和丢包" class="headerlink" title="排队时延和丢包"></a>排队时延和丢包</h3><p>节点时延最复杂的就是排队时延。其取决于流量到达该队列的速率、链路的传输速率和流量到达性质。</p>
+<p><strong>流量强度</strong>：令a表示分组到达的平均速率（a的单位是每秒分组，即packet/s）；R是传输速率，即比特从队列中推出的速率，单位是bps；为了简化起见，假定所以分组是由L比特组成的，则比特到达队列的平均速率是La bps。此时La/R被称为流量强度。</p>
+<p>如果流量强度大于1，则比特到达队列的平均速度超过该队列传输出去的速度，此时队列的增加趋于无界，且排队时延无限大。当流量强度小于1时，到达流量的性质影响排队时延，如果分组以突发形式到达而不是周期形式到达，则可能有很大的平均排队时延。</p>
+<p>丢包的数量随着流量强度的增加而增加。</p>
+<h3 id="端到端时延"><a href="#端到端时延" class="headerlink" title="端到端时延"></a>端到端时延</h3><p>Traceroute程序：其能够在任何因特网主机上运行。当用户指定一个目的主机名字时，源主机中的该程序朝着该目的地发送多个特殊的分组（默认30个）。当这些分组向着目的地传送时，他们通过一系列路由器。当路由器接收到这些特殊分组时，它向源回送一个短报文，该报文包括路由器名字和地址。</p>
+<p>处理流程：假定在源与目的地之间有N-1台路由器，则源将向网络发送N个特殊的分组，其中每个分组地址指向最终的目的地。这N个特殊分组标识从1到N，第一个分组标识为1，最后的分组标识为N。当第n台路由器接收到第n个标识为n的分组时，该路由器不是向目的地转发，而是向源回送一个报文。当目的的主机接到第N个分组时，也会向源返回一个报文。该源记录了从它发送一个分组到它接收到对应返回报文所经受时间，也记录了返回该报文的路由器（或目的地主机）的名字和地址。以这种方式，源能够重建分组从源到目的地所采用的路由，并且能够获得到所有中间路由器的往返时延。Traceroute实际上对上述实验重复了三次，因此实际发送了3*N组数据。</p>
+<p>traceroute输出有6列：第一列是前面描述的n值，即沿着路径上的路由器号码；第二列是路由器名字；第三列是路由器地址；最后三列是3次往返时延。如果源从任何给定的路由器接收少于三条报文（由于网络中丢包），则traceroute在该路由器号码后面放一个星号，并向那台路由器报告少于3次往返时间。例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">$ traceroute www.yinkuiwang.cn</span><br><span class="line">traceroute to www.yinkuiwang.cn (185.199.110.153), 30 hops max, 60 byte packets</span><br><span class="line"> 1  _gateway (10.136.0.1)  2.857 ms  3.053 ms  3.157 ms</span><br><span class="line"> 2  202.113.18.229 (202.113.18.229)  3.281 ms  3.390 ms  3.742 ms</span><br><span class="line"> 3  202.113.18.102 (202.113.18.102)  2.748 ms  3.839 ms  3.804 ms</span><br><span class="line"> 4  111.33.78.1 (111.33.78.1)  4.961 ms  4.929 ms  5.200 ms</span><br><span class="line"> 5  117.131.131.13 (117.131.131.13)  4.239 ms  4.442 ms 117.131.131.9 (117.131.131.9)  4.587 ms</span><br><span class="line"> 6  221.183.38.49 (221.183.38.49)  5.822 ms  2.652 ms  2.647 ms</span><br><span class="line"> 7  * 221.183.8.150 (221.183.8.150)  15.551 ms *</span><br><span class="line"> 8  221.176.21.146 (221.176.21.146)  10.094 ms  10.091 ms 221.176.21.186 (221.176.21.186)  25.060 ms</span><br><span class="line"> 9  221.183.46.253 (221.183.46.253)  16.063 ms  16.178 ms *</span><br><span class="line">10  221.183.30.234 (221.183.30.234)  207.610 ms 221.183.30.230 (221.183.30.230)  198.938 ms 221.183.30.246 (221.183.30.246)  195.548 ms</span><br><span class="line">11  223.120.6.97 (223.120.6.97)  252.070 ms * 223.118.12.5 (223.118.12.5)  218.268 ms</span><br><span class="line">12  223.120.6.113 (223.120.6.113)  239.274 ms 223.120.6.26 (223.120.6.26)  237.843 ms *</span><br><span class="line">13  * * *</span><br><span class="line">14  lag-10.ear1.Madrid2.Level3.net (4.68.111.45)  238.222 ms  236.624 ms  243.475 ms</span><br><span class="line">15  * * *</span><br><span class="line">16  * * *</span><br><span class="line">17  * * *</span><br><span class="line">18  * * *</span><br><span class="line">19  * * *</span><br><span class="line">20  * * *</span><br><span class="line">21  * * *</span><br><span class="line">22  * * *</span><br><span class="line">23  * * *</span><br><span class="line">24  * * *</span><br><span class="line">25  * * *</span><br><span class="line">26  * * *</span><br><span class="line">27  * * *</span><br><span class="line">28  * * *</span><br><span class="line">29  * * *</span><br><span class="line">30  * * *</span><br></pre></td></tr></table></figure>
+
+<p>由于排队时延随时间变化，所以分组n发送到路由器n的往返时延可能大于分组n+1发送到路由器n+1的往返时延。比如上面2和3的第一个时延。</p>
+<h3 id="计算机网络中的吞吐量"><a href="#计算机网络中的吞吐量" class="headerlink" title="计算机网络中的吞吐量"></a>计算机网络中的吞吐量</h3><p>瞬时吞吐量：从主机A向主机B传输一个大文件，B接收该文件的速率（单位bps）。</p>
+<p>平均吞吐量：该文件由F比特组成，而主机B接收到所以F比特使用了T秒，则平均吞吐量为F/T bps。</p>
+<p>从端系统到另一个端系统的吞吐量取决于拼劲链路，即路径中链路速度最慢的那个链路。</p>
+<h2 id="协议层次和它们的服务模型"><a href="#协议层次和它们的服务模型" class="headerlink" title="协议层次和它们的服务模型"></a>协议层次和它们的服务模型</h2><h3 id="分层的体系结构"><a href="#分层的体系结构" class="headerlink" title="分层的体系结构"></a>分层的体系结构</h3><p>网络设计者以分层的方式组织协议以及实现这些协议的网络硬件和软件。每个协议属于一层，某层向其上一层提供服务（service），即所谓的层的服务模型，某层通过在该层中执行某些动作或者使用其直接下层的服务来提供它的服务。</p>
+<p>一个协议层能够通过软件和硬件或两者的结合实现。应用层在端系统的软件中实现，运输层也是这样。物理层和链路层负责处理跨特定链路的通信，通常在与给定链路相关的网络接口卡中实现。网络层经常是软件和硬件的结合。层n协议的不同部分常常位于这些网络组件的各部分。</p>
+<p>协议分层的优点是：概念化结构化；模块化使得更新系统组件更加容易。</p>
+<p>缺点：某层可能重复其较低层的功能；某层的功能可能需要仅在其他某层才出现的信息，这违反了层次分离的目标。</p>
+<p><a href="https://s2.ax1x.com/2019/12/14/Q2bQvn.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/14/Q2bQvn.png" alt="分层"></a></p>
+<p><strong>应用层</strong></p>
+<p>应用层是网络应用程序及其应用层协议存留的地方。应用层包含很多协议：HTTP（web文档请求和传送）；SMTP（电子邮件报文传输）；FTP（两个端系统之间文件传送）。还有某些网络功能，如DNS（域名系统）将网址转换为32比特网络地址。</p>
+<p>应用层协议分别在多个端系统中，一个端系统中的应用程序使用协议与另一个端系统中的应用程序交换信息分组。位于应用层的信息分组称为报文（message）。</p>
+<p><strong>运输层</strong></p>
+<p>运输层提供了在应用程序端点之间传送应用层报文的服务。因特网存在两个运输协议TCP和UDP。TCP向它的应用程序提供了面向连接的服务，这种服务包括了应用层报文向目的地的确保确保传递和流量控制。TCP将长报文换分为短报文，并提供阻塞控制机制，当网络阻塞时，源抑制其传输速率。UDP协议提供无连接服务，其不提供不必要的服务，不提供可靠性，没有流量控制，也没有拥塞控制。运输层分组称为报文段（segment）。</p>
+<p><strong>网络层</strong></p>
+<p>网络层负责将数据报的网络层分组从一台主机移动到另一台主机源主机的因特网运输层协议向网络层递交运输层报文段和目的地地址。</p>
+<p>因特网网络层包括著名的IP协议，该协议定义了数据中各个字段以及端系统和路由器如何作用于这些字段。所有网络层的因特网组件都必须运行IP协议。因特网的网络层也包含决定路由的选路协议。IP是将因特网连接在一起的粘合剂。</p>
+<p><strong>链路层</strong></p>
+<p>为了将分组从一个节点移动到路径的下一个节点，网络层必须使用链路层服务。在每一个节点，网络层将数据报下传给链路层，链路层沿着路径将数据传输给下一个节点，在下一个节点，链路层将数据报上传给网络层。</p>
+<p>链路层提供的服务取决于应用于该链路的特定链路协议。主要有以太网、WIFI和点对点协议（PPP）。链路层分组称为帧。</p>
+<p><strong>物理层</strong></p>
+<p>链路层是将帧从一个网路元素移动到临近的网络元素。物理层任务是将该帧中的一个一个比特从一个节点移动到下一个节点。</p>
+<p><strong>ISO</strong>模型</p>
+<p>ISO多加了两层，表示层和会话层。表示层是使通信的应用程序能够解释交换数据的含义，提供的服务包括数据压缩、数据加密以及数据描述。会话层提供了数据交换的定界和同步功能，包括建立检查点和恢复方案的方法。</p>
+<h3 id="报文、报文段、数据报和帧"><a href="#报文、报文段、数据报和帧" class="headerlink" title="报文、报文段、数据报和帧"></a>报文、报文段、数据报和帧</h3><p><a href="https://s2.ax1x.com/2019/12/14/Q2LEtS.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/14/Q2LEtS.png" alt="传输"></a></p>
+<p>上图显示了一条物理路径：数据从发送端系统的协议向下，上下中间的链路层交换机和路由器的协议栈，进而向上到达接收端系统的协议栈。</p>
+<p>上图也说明了封装这一重要概念。在发送主机，应用层报文（M）被传送给运输层；运输层收取报文并附上附加信息（运输层首部Ht），该首部将被被接收的运输层使用。应用层报文和运输层首部信息共同构成了运输层报文段。运输层报文段因此封装了应用层报文。运输层则向网络层传递该报文段，网络层增加了如源和目的地端系统地址等网络首部信息形成网络层数据报。该数据报接下来被传递给链路层，链路层添加自己的链路首部信息并创建链路帧。于是，在每一层，分组具有两种类型的字段：首部字段和有效荷载字段，有效荷载字段来自于上一层。</p>
+<h2 id="攻击威胁下的网络"><a href="#攻击威胁下的网络" class="headerlink" title="攻击威胁下的网络"></a>攻击威胁下的网络</h2><h3 id="坏家伙能够经因特网将恶意软件放入你的计算机"><a href="#坏家伙能够经因特网将恶意软件放入你的计算机" class="headerlink" title="坏家伙能够经因特网将恶意软件放入你的计算机"></a>坏家伙能够经因特网将恶意软件放入你的计算机</h3><p>僵尸网络：被恶意软件感染的设备，受害主机还能征招网络上数以千计的类似受害设备。</p>
+<p>自我复制：一旦恶意软件感染了一台主机，就会从那台主机进入到更多主机。</p>
+<p>病毒：一种需要某种形式的用户交互来感染用户设备的恶意软件。</p>
+<p>特洛伊木马：隐藏在有用软件的恶意软件。</p>
+<h3 id="坏家伙能够攻击服务器和网络基础设施"><a href="#坏家伙能够攻击服务器和网络基础设施" class="headerlink" title="坏家伙能够攻击服务器和网络基础设施"></a>坏家伙能够攻击服务器和网络基础设施</h3><p>拒绝服务攻击（Denial-of-Service，DoS）是一种宽泛的安全性攻击，其使得合法用户不能使用网络、主机或其他基础设施部分。DoS攻击主要分为三种：</p>
+<ol>
+<li>弱点攻击：向目标主机上运行的易受攻击的应用程序或操作系统发送制作精细的报文。如果多个分组以适当的顺序发送给一个易受攻击的应用程序或操作系统，该服务可能停止运行，甚至导致主机奔溃。</li>
+<li>带宽泛洪：攻击者向目标主机发送大量的分组，导致目标的接入链路变得拥塞，从而使合法的分组无法到达服务器。</li>
+<li>连接泛洪：攻击者在目标主机中创建大量的半开或全开TCP连接。目标主机因这些伪造的连接而显然困境，从而停止合法的连接。</li>
+</ol>
+<p>对于带宽泛洪，单一源可能无法产生足够大的流量来危害服务器，同时单一攻击可能被上游路由器检测出该攻击并在该流量靠近服务器前就将其阻挡下来。分布式DoS（distributed Dos，DDos）中，攻击者控制多个源并让每个源向目标猛烈发送流量。</p>
+<h3 id="坏家伙能嗅探分组"><a href="#坏家伙能嗅探分组" class="headerlink" title="坏家伙能嗅探分组"></a>坏家伙能嗅探分组</h3><p>在无线传输设备的附加放置一台被动接收机，该接收机就能得到传输的每个分组的拷贝。记录每个流经分组拷贝的被动接收机被称为分组嗅探器。</p>
+<p>嗅探器也可用于有线环境，如在有线广播中。嗅探器是被动接收设备，很难被发现，因此最后的防御手段是密码学方式。</p>
+<h3 id="坏家伙能够伪装成你信任的人"><a href="#坏家伙能够伪装成你信任的人" class="headerlink" title="坏家伙能够伪装成你信任的人"></a>坏家伙能够伪装成你信任的人</h3><p>生成具有任意原地址、分组内容和目的地址的分组，然后将这个人工制作的分组传输到因特网中是十分容易的。将虚假源地址的分组注入因特网的能力被称为IP哄骗（IP spoofing），这只是一个用户能够冒充另一个用户的多种形式之一。</p>
+<p>为解决这个问题，需要采用端点鉴别（end-point authentication）机制，即确保报文源自我们认为应该来自的地方的机制。</p>
+<h3 id="坏家伙能够修改或删除报文"><a href="#坏家伙能够修改或删除报文" class="headerlink" title="坏家伙能够修改或删除报文"></a>坏家伙能够修改或删除报文</h3><p>坏家伙插入到两个通信实体之间，危及发送信息的完整性。</p>
+<h1 id="第二章-应用层"><a href="#第二章-应用层" class="headerlink" title="第二章 应用层"></a>第二章 应用层</h1><h2 id="应用层协议原理"><a href="#应用层协议原理" class="headerlink" title="应用层协议原理"></a>应用层协议原理</h2><h3 id="网络应用程序体系结构"><a href="#网络应用程序体系结构" class="headerlink" title="网络应用程序体系结构"></a>网络应用程序体系结构</h3><p>从应用程序研发者角度来看，网络体系结构是固定的，并为应用程序提供了特定的服务集合。现代网络应用程序所使用的两种主流体系结构：客户机/服务器体系结构或对等（P2P）体系结构。</p>
+<p>在客户机/服务器体系结构中，有一个总是打开的主机被称为服务器，它服务来自许多客户机的主机请求。典型例子为Web应用程序。在这个结构中，客户机之间不之间相互通信，服务器有固定的、周知的地址，称为IP地址。</p>
+<p>在P2P体系结构中，对总是打开的基础设施服务器有最小的（或者没有）依赖。任意间断连接的主机对——称为对等方，直接通信。P2P协议最突出的特性之一是它的自扩展性。</p>
+<p>某些应用具有混合的体系结构，由客户机/服务器和P2P元素结合而成，往往服务器场用于跟踪用户的IP地址，但用户到用户的报文在用户主机之间直接发送。</p>
+<h3 id="进程通信"><a href="#进程通信" class="headerlink" title="进程通信"></a>进程通信</h3><p>网络应用程序是由成对的进程组成，这些进程通过网络相互发送报文。在给定的一对进程中之间的通信会话中，发起通信（即在该回话开始时与其他进程联系）的进程被标示为客户机，在会话开始时等待联系的进程是服务器。</p>
+<p>进程通过套接字软件接口在网络上发送和接收报文。应用程序开发者可以控制套接字在应用层端的所以东西，但是对套接字的运输层端几乎没有控制。应用程序开发者对于应用层端的控制仅限于：</p>
+<ol>
+<li>选择运输协议。</li>
+<li>设定部分运输层参数，如最大缓存、最大报文长度等。</li>
+</ol>
+<h3 id="可供应用程序使用的传输协议"><a href="#可供应用程序使用的传输协议" class="headerlink" title="可供应用程序使用的传输协议"></a>可供应用程序使用的传输协议</h3><p><strong>可靠传输数据</strong></p>
+<p>第一章讨论过，分组可能会存在丢包，部分程序要保证数据完整性。如果一个协议提供了确保数据交付服务，就提供了<strong>可靠数据传输</strong>。运输层协议能够潜在的向应用程序提供的一个重要服务是进程到进程的可靠数据传输。此时，发送进程只要将数据传递给套接字，就可以相信数据被无差错到达接收进程。</p>
+<p>部分程序运行存在部分丢包，即为容忍丢失的应用。</p>
+<p><strong>吞吐量</strong></p>
+<p>具有吞吐量要求的应用程序，被称为带宽敏感应用。弹性应用根据需要充分利用可供使用的吞吐量。</p>
+<p><strong>定时</strong></p>
+<p>部分应用为了有效性而对数据交付有严格的时间限制。</p>
+<p><strong>安全性</strong></p>
+<p>运输层协议能够为应用程序提供一种或多种安全性服务。</p>
+<h3 id="因特网的运输服务"><a href="#因特网的运输服务" class="headerlink" title="因特网的运输服务"></a>因特网的运输服务</h3><p>因特网（TCP/IP网络）上的应用使用了两个运输层协议：UDP和TCP。创建应用时首先要决定使用哪一个。</p>
+<h4 id="TCP服务"><a href="#TCP服务" class="headerlink" title="TCP服务"></a>TCP服务</h4><p>TCP服务模型包括面向连接服务和可靠数据传输服务。</p>
+<p>（1）面向连接服务：使用TCP协议时，在应用层数据报文开始流动之前，其客户机程序和服务器程序之间互相交换运输层控制信息。即为握手过程，此过程提示客户机和服务器之间建立了一个<strong>TCP连接</strong>。这个连接是双全工的，即两个进程可以同时进行报文的收发。当应用程序结束报文发送时，必须拆除该连接。</p>
+<p>（2）可靠数据服务：进程通信的进程依靠TCP协议，无差错、按适当顺序交付发送的数据。没有子节的丢失和冗余。</p>
+<p>（3）拥塞控制机制：这种机制不为通信进程带来直接好处。但能够为因特网带来整体好处。当发送方和接收方之间网络发生拥塞时，TCP协议的拥塞控制机制会抑制发送进程。此机制对带宽敏感的应用有害。</p>
+<h4 id="UDP服务"><a href="#UDP服务" class="headerlink" title="UDP服务"></a>UDP服务</h4><p>UDP是一种不提供不必要服务的轻量级运输层协议，它仅提供最小服务。UDP是无连接的，因此两个进程之间没有握手的过程。UDP协议提供的是不可靠数据传输服务，即不保证一定能收到，也不保证顺序。</p>
+<p>UDP没有拥塞控制机制。</p>
+<h4 id="因特网运输层不提供的服务"><a href="#因特网运输层不提供的服务" class="headerlink" title="因特网运输层不提供的服务"></a>因特网运输层不提供的服务</h4><p>目前因特网不提供吞吐量和定时的保证。下面列出了一些流行因特网应用使用的运输层协议：</p>
+<table>
+<thead>
+<tr>
+<th align="left">应用</th>
+<th align="left">应用层协议</th>
+<th align="left">运输层协议</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">电子邮件</td>
+<td align="left">SMTP</td>
+<td align="left">TCP</td>
+</tr>
+<tr>
+<td align="left">远程终端访问</td>
+<td align="left">Telnet</td>
+<td align="left">TCP</td>
+</tr>
+<tr>
+<td align="left">Web</td>
+<td align="left">HTTP</td>
+<td align="left">TCP</td>
+</tr>
+<tr>
+<td align="left">文件传输</td>
+<td align="left">FTP</td>
+<td align="left">TCP</td>
+</tr>
+<tr>
+<td align="left">流媒体</td>
+<td align="left">HTTP、RTP</td>
+<td align="left">TCP或UDP</td>
+</tr>
+<tr>
+<td align="left">因特网电话</td>
+<td align="left">SIP、RTP或专用（如Skype）</td>
+<td align="left">通常用UDP</td>
+</tr>
+</tbody></table>
+<h4 id="进程寻址"><a href="#进程寻址" class="headerlink" title="进程寻址"></a>进程寻址</h4><p>为了识别接收进程，需要定义两种信息：（1）该主机的名称或地址，（2）用来指定目的主机上接收进程的标识。</p>
+<p>在因特网中，主机使用IP地址进行标识（第四章深入探究）。此时，我们只要知道IP地址是用来<strong>唯一</strong>标识主机的32比特数就足够了。</p>
+<p>发送程序也必须识别运行在主机上的接收进程，目的地端口服务于此目的。已经给流行的应用程序分配了特定的端口号。如Web是80号。这是为了特定应用程序开发时大家统一，可以直接进行通信。</p>
+<h3 id="应用层协议"><a href="#应用层协议" class="headerlink" title="应用层协议"></a>应用层协议</h3><p>应用层协议定义了运行在不同端系统上的应用程序进程如何相互传递报文。其主要定义了如下内容：</p>
+<ol>
+<li>交换的报文类型，如请求报文和响应报文。</li>
+<li>各种类型的语法，如报文中的各个字段及其详细描述。</li>
+<li>字段的语义，即包含在字段中的信息含义。</li>
+<li>进程何时、如何发送报文以及对报文响应的规则。</li>
+</ol>
+<p>网络应用和应用层协议的区别：应用层协议只是网络应用的一部分，只是定义了应用程序之间沟通的协议。</p>
+<h2 id="Web应用与HTTP协议"><a href="#Web应用与HTTP协议" class="headerlink" title="Web应用与HTTP协议"></a>Web应用与HTTP协议</h2><h3 id="HTTP概况"><a href="#HTTP概况" class="headerlink" title="HTTP概况"></a>HTTP概况</h3><p>Web应用层协议是超文本传输协议（HyperText Transfer Protocol，HTTP）。HTTP协议有两部分程序实现：客户机程序和服务器程序，它们运行在不同的端系统中，通过交换HTTP报文进行会话。HTTP定义了这些报文的格式以及客户机和服务器是如何进行报文交换的。</p>
+<p>Web页面（Web page，也叫文档）是由对象组成的。对象简单来说就是文件，如HTML文件，JPEG图片文件、Java小程序或视频文件，这些文件可以通过一个URL地址寻址。多数Web页面含义一个基本的HTML文件以及几个引用对象。如一个Web页面包括一个HTML文件和5个JPEG图形文件，那这个Web页面有六个对象。每个URL地址由两部分组成：存放对象的服务器主机名和对象的路径名。如：<code>http://www.someschool.edu/someDepartment/picture.gif</code>中的<code>www.someschool.edu</code>即为主机名，<code>/someDepartment/picture.gif</code>即为路径。</p>
+<p>HTTP定义了Web客户端如何向Web服务器请求Web页面，以及服务器如何将Web页面传送给客户端。</p>
+<p>HTTP使用TCP作为支撑运输层协议。HTTP客户机发送一个与服务器的TCP连接，建立连接后，客户端和服务器就可以进行通信了。</p>
+<p>服务器向客户机发送请求的文件时，并不存储任何关于该客户机的状态信息。由于HTTP服务器不存储关于客户机状态的信息，使用说HTTP是一个无状态协议。</p>
+<h3 id="非持久连接和持久连接"><a href="#非持久连接和持久连接" class="headerlink" title="非持久连接和持久连接"></a>非持久连接和持久连接</h3><p>当客户机/服务器的交互运行于TCP之上时，应用程序开发者需要确定每个请求/响应是经过单独的TCP连接发送还是所以请求及响应经相同的TCP连接发送。前者称为非持久连接，后者称为持久连接。HTTP两者都支持，默认使用持久连接。非持久连接每个TCP连接只传输一个请求报文和一个响应报文。</p>
+<p><strong>往返时间</strong>（Round-Trip Time，RTT）：即一个小分组从客户机到服务器再回到客户机所花费的时间。一个RTT等于三次握手中前两个部分所消耗的时间。</p>
+<p>非持久连接缺点：</p>
+<ol>
+<li>必须为每一个请求的对象建立和维护一个全新的连接，对于每个这样的连接，在客户机和服务器都要分配TCP的缓冲区和变量，这给服务器带来严重负载。</li>
+<li>每个对象的传输时延为两个RTT（三次握手前两部分为一个，第三次握手（确认）同时发送请求，因此只有两个RTT）。</li>
+</ol>
+<h3 id="HTTP报文格式"><a href="#HTTP报文格式" class="headerlink" title="HTTP报文格式"></a>HTTP报文格式</h3><p>HTTP有两种报文：请求报文和响应报文</p>
+<h4 id="请求报文"><a href="#请求报文" class="headerlink" title="请求报文"></a>请求报文</h4><p>下面是一个典型的请求报文：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">GET /somedir/page.html HTTP/1.1</span><br><span class="line">Host: www.someschool.edu</span><br><span class="line">Connection: close</span><br><span class="line">User-agent: Mozilla/4.0</span><br><span class="line">Accept-language: fr</span><br></pre></td></tr></table></figure>
+
+<p>HTTP请求第一行叫做请求行，其后继的行叫做首部行。请求行有三个字段：方法字段、URL字段和HTTP协议版本字段。方法字段可以取值GET、POST、HEAD、PUT和DELETE。</p>
+<p>首部行<code>Host:www.someschool.edu</code>定义了目标所在主机。<code>Connection:close</code>首部行，告诉服务器不希望麻烦的使用持久连接，要求服务器发送完请求的对象后就关闭连接。<code>User-agent:</code>首部行用来定义用户代理，即向服务器发送请求的浏览器类型。<code>Accept-language</code>表示用户想要得到该对象的语法版本。<code>Accept-language:</code>是可选内容协商首部之一。</p>
+<p>下图展示了请求报文的通用格式：</p>
+<p><a href="https://s2.ax1x.com/2019/12/17/Qox10K.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/17/Qox10K.png" alt="http requer"></a></p>
+<p>在首部行和附加回车换行后有一个实体主体（Entity body）。使用GET方法时实体主体为空，使用POST方法时才使用。使用POST方法的报文中，用户依然可以请求一个Web页面，但Web返回的内容依赖于POST方法的报文中。当方法字段值为POST时，实体主题中包含的就是用户在表单字段中输入的内容。</p>
+<p>HTML表单经常使用GET将输入数据（在表单字段中）传送到正确的URL。如，一个表单使用GET方式，它有两个字段，分别填写的是monkey和bananas，那么得到的URL结构为：<code>www.somesite.com/animalsearch?monkey&amp;bananas</code>。</p>
+<p>HEAD方法类似于GET。当服务器收到使用HEAD方法的请求时，会用一个HTTP的报文进行响应，但是并不返回请求对象（用于调试）。PUT方法用来向Web服务器上传对象。DELETE方法，用来删除Web服务器上的对象。</p>
+<h4 id="HTTP响应报文"><a href="#HTTP响应报文" class="headerlink" title="HTTP响应报文"></a>HTTP响应报文</h4><p>典型响应报文格式：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Connection: close</span><br><span class="line">Date: THu,03 Jul 2003 12:00:15 GMT</span><br><span class="line">Server: Apache/1.3.0(Unix)</span><br><span class="line">Last-Modified: Sun,6 May 2007 09:23:24 GMT</span><br><span class="line">Connect-Length: 6821</span><br><span class="line">Content-Type: text/html</span><br><span class="line"></span><br><span class="line">(data data ...)</span><br></pre></td></tr></table></figure>
+
+<p>响应分三部分：一个初始状态行，首部行和实体主体。实体主体是报文的主体，它包含一个所请求对象本身。状态行有三个字段：协议版本、状态码和相应状态信息。</p>
+<p><code>Connection:close</code>首部行告诉客户机发送完毕后关闭连接。<code>Date</code>首部行指示服务器产生并发送该响应报文的日期和时间。时间是指服务器从它的文件系统中检索到该对象，插入到响应报文的时间。<code>Server</code>报文指示服务器类型，类似与请求报文中<code>User-agent</code>首部行。<code>Last_Modified</code>首部行指示了对象穿件或最后修改的日期和时间。<code>Content_Length</code>表明被发送对象的字节数。<code>Content_Type</code>指示了实体主体原本的类型（HTML还是图片等）。</p>
+<p>下图展示了响应报文的通用格式：</p>
+<p><a href="https://s2.ax1x.com/2019/12/17/Qox3TO.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/17/Qox3TO.png" alt="http return"></a></p>
+<p>一些常见的状态码：</p>
+<table>
+<thead>
+<tr>
+<th align="left">200</th>
+<th align="left">OK</th>
+<th align="left">请求成功</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">301</td>
+<td align="left">Moved Permanently</td>
+<td align="left">请求的对象已经被永久转移了，新的URL定义在响应报文的Location：首部行中。客户机软件自动用新的URL获取该对象。</td>
+</tr>
+<tr>
+<td align="left">400</td>
+<td align="left">Bad REquest</td>
+<td align="left">一个通过错误代码，指示请求不能被服务器理解。</td>
+</tr>
+<tr>
+<td align="left">404</td>
+<td align="left">NOT Found</td>
+<td align="left">请求的文档不在服务器上。</td>
+</tr>
+<tr>
+<td align="left">505</td>
+<td align="left">HTTP version not supported</td>
+<td align="left">服务器不支持请求报文使用的HTTP协议版本。</td>
+</tr>
+</tbody></table>
+<p>可以使用<code>telnet</code>来观察真实的HTTP响应报文。使用<code>telnet site 80</code>即建立了一个本地到指定Web服务器的TCP连接，之后输入请求即可，如下：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br></pre></td><td class="code"><pre><span class="line">$ telnet www.yinkuiwang.cn 80</span><br><span class="line">Trying 185.199.111.153...</span><br><span class="line">Connected to chst1.github.io.</span><br><span class="line">Escape character is &apos;^]&apos;.</span><br><span class="line">GET /2019/06/16/KMP/ HTTP/1.1</span><br><span class="line">Host:www.yinkuiwang.cn</span><br><span class="line"></span><br><span class="line">HTTP/1.1 200 OK</span><br><span class="line">Content-Type: text/html; charset=utf-8</span><br><span class="line">Server: GitHub.com</span><br><span class="line">Last-Modified: Mon, 02 Dec 2019 08:16:22 GMT</span><br><span class="line">ETag: &quot;5de4c856-67bd&quot;</span><br><span class="line">Access-Control-Allow-Origin: *</span><br><span class="line">Expires: Wed, 18 Dec 2019 01:39:45 GMT</span><br><span class="line">Cache-Control: max-age=600</span><br><span class="line">X-Proxy-Cache: MISS</span><br><span class="line">X-GitHub-Request-Id: B9A8:56A3:1F39F4:214343:5DF98109</span><br><span class="line">Content-Length: 26557</span><br><span class="line">Accept-Ranges: bytes</span><br><span class="line">Date: Wed, 18 Dec 2019 01:29:45 GMT</span><br><span class="line">Via: 1.1 varnish</span><br><span class="line">Age: 0</span><br><span class="line">Connection: keep-alive</span><br><span class="line">X-Served-By: cache-hnd18746-HND</span><br><span class="line">X-Cache: MISS</span><br><span class="line">X-Cache-Hits: 0</span><br><span class="line">X-Timer: S1576632586.764452,VS0,VE186</span><br><span class="line">Vary: Accept-Encoding</span><br><span class="line">X-Fastly-Request-ID: cf573b3feb014acb04fd481fecf2de696fde337e</span><br><span class="line"></span><br><span class="line">&lt;!DOCTYPE html&gt;</span><br></pre></td></tr></table></figure>
+
+<p>后面的实体主体没有全部展示。注意，在敲下Host首部行之后要连击两下回车，表示输入请求完成。</p>
+<h3 id="用于与服务器的交互：cookie"><a href="#用于与服务器的交互：cookie" class="headerlink" title="用于与服务器的交互：cookie"></a>用于与服务器的交互：cookie</h3><p>前面提到，HTTP是无状态的，然而一个Web站点通常希望能够识别用户，即可能是为了服务器限制用户访问，也可能是它想把内容与用户身份联系起来。为此，HTTP使用了cookie，它允许站点跟踪用户。</p>
+<p><a href="https://s2.ax1x.com/2019/12/18/QT2s6s.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/18/QT2s6s.png" alt="cookie"></a></p>
+<p>如上图所示，cookie由四部分组成：</p>
+<ol>
+<li>在HTTP响应报文中有一个cookie首部行；</li>
+<li>在HTTP请求报文中有一个cookie首部行；</li>
+<li>在用户端系统保留一个cookie文件，由用户的浏览器管理；</li>
+<li>在Web站点有一个后端数据库。</li>
+</ol>
+<p>cookie可以在无状态的HTTP上建立一个用户层会话。例如，基于Web的电子邮件系统，浏览器向服务器发送一个cookie信息，运行该服务器通过用户与应用程序之间的会话对用户进行验证。</p>
+<h3 id="Web缓存"><a href="#Web缓存" class="headerlink" title="Web缓存"></a>Web缓存</h3><p>Web缓存器（Web cache）也叫代理服务器（proxy server），它是能够初始Web服务器来满足HTTP请求的网络实体。Web缓冲器有自己的磁盘存储空间，并在该存储空间中保存最近请求的对象的拷贝。</p>
+<p><a href="https://s2.ax1x.com/2019/12/18/QTWdzQ.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/18/QTWdzQ.png" alt="web cache"></a></p>
+<p>一旦配置了浏览器，每个浏览器对对象的请求首先被定向到Web缓存器。其请求所经历流程大致如下：</p>
+<ol>
+<li>浏览器建立一个到Web缓存器的TCP连接，并发送请求。</li>
+<li>Web缓存器检测本地是否存储了该对象的拷贝。如果有，Web缓存器就用HTTP响应报文回复。</li>
+<li>如果Web缓存器没有该对象，它就与该对象的初始服务器打开一个TCP连接，并发送请求。</li>
+<li>当Web缓存器接收到该对象时，在本地存储一份拷贝，并用HTTP响应报文向客户端发送报文。</li>
+</ol>
+<p>Web缓存器的好处：</p>
+<ol>
+<li>大大减少客户机请求响应时间，尤其在客户机与初始服务器之间的瓶颈带宽远低于客户机与Web服务器瓶颈带宽时。</li>
+<li>可以大大减少一个机构内部网与因特网接入链路上的通信量，降低费用。</li>
+<li>整体上大大降低因特网上的Web流量，从而改善所以应用的性能。</li>
+</ol>
+<h3 id="条件GET方法"><a href="#条件GET方法" class="headerlink" title="条件GET方法"></a>条件GET方法</h3><p>条件GET方法是一种机制，允许缓存器证实它的对象是最新的。如果（1）请求报文使用GET方法；（2）请求报文包含一个<code>if-modified-since</code>首部行，那么这个HTTP请求报文就是一个条件GET请求报文。</p>
+<p>缓存器发送一个条件GET，执行最新检查，例如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">GET /fruit/kiwi.gif HTTP/1.1</span><br><span class="line">Host: www.somesite.com</span><br><span class="line">If-modified-since: Wed,4 Jul 2007 09:23:24</span><br></pre></td></tr></table></figure>
+
+<p>该条件GET报文告诉服务器，仅当自指定日期之后修改过该对象才发送该对象。如果未改动过该对象，初始服务器响应报文可能是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">HTTP/1.1 304 Not Modified</span><br><span class="line">Date: Sat,14 Jul 2007 15:39:29</span><br><span class="line">Server: Apache/1.3.0(Unix)</span><br><span class="line">(实体主体为空)</span><br></pre></td></tr></table></figure>
+
+<h2 id="文件传输协议：FTP"><a href="#文件传输协议：FTP" class="headerlink" title="文件传输协议：FTP"></a>文件传输协议：FTP</h2><p><a href="https://s2.ax1x.com/2019/12/18/QT7TPI.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/18/QT7TPI.png" alt="FTP"></a></p>
+<p>FTP用于向一台远程主机上传或下载其文件。为了使用户能够访问远程主机，用户必须提供一个用户标识和口令。</p>
+<p>HTTP和FTP都是文件传输协议，存在很多异同。相同点都是使用TCP作为运输层协议。主要区别是FTP使用两个并行的TCP连接来传输文件，一个是控制连接，一个是数据连接。控制连接用于在两个主机之间传输控制信息，如用户标识、口令、改变远程目录的命令以及“put”和“get”命令。数据连接用于实际传输一个文件。FTP使用一个分离的控制连接，所以我们称其控制信息是<strong>外带</strong>传送的。HTTP是<strong>内带</strong>的。</p>
+<p>下图展示了FTP控制连接和数据连接：</p>
+<p><a href="https://s2.ax1x.com/2019/12/18/QTqQbD.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/18/QTqQbD.png" alt="FTP"></a></p>
+<p>当用户主机与远程主机开始一个会话前，FTP的客户机首先在21号端口上发起一个用于控制的与服务器的TCP连接。FTP客户机通过该控制连接发送用户标识与口令，也改变远程目录的命令。当FTP服务器端从该连接上收到一个文件传输的目录后，就发起一个客户端的数据连接。FTP在该连接上准确地传送一个文件并关闭该连接。如果还要传输别的文件，FTP则另打开一个连接。FTP控制连接贯彻了整个用户会话期间，但文件传输连接只在每次需要时才建立。</p>
+<p>FTP服务器必须在整个会话期间保存用户的状态。服务器必须把特定用户账户与控制连接联系起来，随着用户在远程目录树上移动，服务器必须追踪用户在目录树上的当前位置。而HTTP是无状态的，不必对用户行为进行追踪。</p>
+<p>一些常用FTP命令有：</p>
+<p>USER username：用于向服务器传送用户标识。</p>
+<p>PASS password：用于向服务器传送用户口令。</p>
+<p>LIST：用于请求服务器返回远程主机当前目录的所有文件列表。文件列表将在数据连接上传送。</p>
+<p>RETR filename：用于从远程主机的当前目录检索文件。该命令触发远程主机发起一个数据连接，并发送文件。</p>
+<p>STOR filename：用于向远程主机的当前目录存放文件。</p>
+<p>常见回答为：</p>
+<p>331 Username OK，password required</p>
+<p>125 Data connection already open；transfer starting</p>
+<p>425 Can’t open data connection</p>
+<p>452 Error writing file</p>
+<h2 id="因特网中的电子邮件"><a href="#因特网中的电子邮件" class="headerlink" title="因特网中的电子邮件"></a>因特网中的电子邮件</h2><p><a href="https://s2.ax1x.com/2019/12/18/Q7rZDK.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/18/Q7rZDK.png" alt="mail"></a></p>
+<p>上图展示了因特网电子邮件的总体情况，其主要由三部分组成：用户代理（user agent）、邮件服务器（mail server）和简单邮件传输协议（Smiple Mail Transfer Protocol，SMTP）。</p>
+<p>用户代理允许用户阅读、回复、转发、保存和撰写报文（用户代理也叫邮件阅读器）。邮件代理向其邮件服务器发送邮件，并且该邮件被放在邮件服务器发送报文列中。当用户想要获取邮件时，其邮件代理从他的位于邮件服务器的邮箱中获取该报文。</p>
+<p>邮件服务器组成了电子邮件系统的核心。每个接收方在其中的某个服务器上有一个邮箱。</p>
+<p>邮件发送过程为：从发送方的用户代理开始，传输到发送方的邮件服务器，再传输到接收方的邮件服务器，然后在这里被分发到接收方的邮箱中。在传递到接收方的邮件服务器时，发送方邮件服务器还要处理接收方服务器故障的问题：当发送方发送失败时，发送方邮件服务器在一个报文列表中保持该报文并在以后尝试再次发送，一般半个小时尝试一次，如果几天依然不能成功，会删除该报文并通知发送方。在接收方查看邮件时，接收方服务器会首先鉴别其身份。</p>
+<p>SMTP是因特网电子邮件中主要的应用层协议。它使用TCP可靠传输服务。</p>
+<h3 id="SMTP"><a href="#SMTP" class="headerlink" title="SMTP"></a>SMTP</h3><p>SMTP用于从发送方的邮件服务器发送报文到接收方的邮件服务器。SMTP邮件的主体部分（不止其首部）只能采用简单的7位ASCII码表示。</p>
+<p>当A给B发送一封简单的ASCII报文时，其流程如下：</p>
+<p>1）A调用他的邮件代理程序并提供B的邮件地址，撰写邮件，然后通过用户代理发送该邮件。</p>
+<p>2）A的用户代理把报文发送给A的邮件服务器，在那里该报文被放在报文发送队列中。</p>
+<p>3）运行在A邮件服务器上的SMTP客户机端发现报文队列中这个报文，就创建一个到运行在B的邮件服务器上的STMP服务器的TCP连接。</p>
+<p>4）在经过一些初始SMTP握手后，SMTP客户机通过该TCP连接发送A的报文。</p>
+<p>5）在B的邮件服务器上，SMTP的服务器端接收该报文，B的邮件服务器然后将该报文放入B的邮箱中。</p>
+<p>6）在B方便的时候，调用用户代理阅读报文。</p>
+<p>下图展示了该过程：</p>
+<p><a href="https://s2.ax1x.com/2019/12/18/Q7Rpss.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/18/Q7Rpss.png" alt="过程"></a></p>
+<p>SMTP一般不使用中间邮件服务器发送邮件。</p>
+<p>SMTP客户机（运行在发送方邮件服务器上）在25号端口建立一个到SMTP服务器的TCP连接。一但建立连接，服务器和客户机就执行一些应用层的握手，在握手阶段，，SMTP客户机指定发送方的邮件地址和接收方的邮件地址。之后发送报文。</p>
+<p>下面是SMTP服务器（S,主机名是server）和SMTP客户机（C，主机名是client）之间交换报文脚本的例子，一旦创建了TCP连接，就开始下列过程：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line">S: 220 server</span><br><span class="line">C: HELO client</span><br><span class="line">S: 250 Hello client pleased to meet you</span><br><span class="line">C: MALL FROM: &lt;alice@crepes.fr&gt;</span><br><span class="line">S: 250 alice@crepes.fr ... Sender ok</span><br><span class="line">C: RCPR TO: &lt;bob@hamburger.edu&gt;</span><br><span class="line">S: 250 bob@hamburger.edu ... Recipient ok</span><br><span class="line">C: DATA</span><br><span class="line">S: 345 Enter mail, end with &quot;.&quot; on a line by itself</span><br><span class="line">C: Do you like ketchup?</span><br><span class="line">C: How about pickles?</span><br><span class="line">C: .</span><br><span class="line">S: 250 Messgae accepted for delivery</span><br><span class="line">C: QUIT</span><br><span class="line">S: 221 server closing conncetion</span><br></pre></td></tr></table></figure>
+
+<p>上例中，客户机程序从邮箱服务器client向邮箱服务器server发送了一个报文（Do you like ketchup？How about pickles？）。客户机发送了五条命令：HELO（hello的缩写）、MALL FROM、RCPT TO、DATA以及QUIT。这些命令是自解释的。客户机通过发送一个只包含句点的行，告诉服务器该报文结束了。（按照ASCII码，每个报文以<code>CRLF.CRLF</code>结束，其中<code>CR</code>和<code>LF</code>分别表示回车和换行）。应达250表示正常。SMTP使用持久连接：如果发送邮件服务器有几个报文发往同一个接收服务器，可以通过一个TCP连接发送所有这些报文。对每个报文，客户机都用一个新的MALL FROM开始，仅当所以邮件全部发送完全才发送QUIT。</p>
+<h3 id="与HTTP的对比"><a href="#与HTTP的对比" class="headerlink" title="与HTTP的对比"></a>与HTTP的对比</h3><p>相同点：都是使用了持久连接。</p>
+<p>不同点：</p>
+<ol>
+<li>HTTP是一个拉协议，即人们可以在方便的时候装载Web信息，即用户使用HTTP从该服务器拉取信息。TCP连接是由想获取文件的机器发起的。</li>
+<li>SMTP是一个推协议，即发送邮件服务器把文件推到接收邮件服务器，TCP连接是由要发送的机器发起的。</li>
+<li>SMTP要求每个报文使用7位ASCII格式。如果某报文包含了非7位ASCII字符或二进制数据，则该报文必须按照7位ASCII进行编码。</li>
+</ol>
+<h3 id="邮件报文格式和MIME"><a href="#邮件报文格式和MIME" class="headerlink" title="邮件报文格式和MIME"></a>邮件报文格式和MIME</h3><p>邮件报文要包含环境信息，这些环境信息包含在首部行中。每个首部行包含一个From首部行和一个To首部行，可以包含一个Subject首部行或其他可选的首部行。这些首部行不同于在之前所学的SMTP命令，之前的命令是SMTP握手协议的一部分，而首部行是邮件报文的一部分。但是邮件发给谁和从哪里来不是由首部行决定的，而是由SMTP命令决定的。下面展示了一个典型的报文首部：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">From: a</span><br><span class="line">To: b</span><br><span class="line">Subject: Searching for the meaning oof file</span><br></pre></td></tr></table></figure>
+
+<p>在报文首部之后，紧接着是空白行，然后是以ACSII格式表示的报文主体。</p>
+<h4 id="非ASCII码数据的MIME扩展"><a href="#非ASCII码数据的MIME扩展" class="headerlink" title="非ASCII码数据的MIME扩展"></a>非ASCII码数据的MIME扩展</h4><p>为发送非ASCII文本的内容，发送方必须在报文中使用附加的首部行。多用途因特网邮件扩展（Multipurpose Internet Mail Extension，MIME）。支持多媒体的量关键字MIME首部为Content-Type:和Content-Transfer-Encoding：。前者允许接收用户代理采取适当的动作，后者提示接收用户代理该报文已经使用了ASCII编码，并指出了使用的编码类型。当用户代理接收到包含这两个首部行的报文时，会根据Content-Transfer-Encoding的值将报文编码为非ASCII格式，然后根据Content-Type首部行决定它应该采取何种动作来处理报文。</p>
+<h4 id="接收的报文"><a href="#接收的报文" class="headerlink" title="接收的报文"></a>接收的报文</h4><p>接收器一旦接收到具有RFC 822和MIME的首部行，就在该报文的顶端添加一个Received:首部行。该首部行定义了发送该报文的SMTP服务器的名称，接收该报文的SMTP服务器名称和接收时间。例如：<code>Received: from server by client; 12 Oct 98</code>。</p>
+<h3 id="邮件访问协议"><a href="#邮件访问协议" class="headerlink" title="邮件访问协议"></a>邮件访问协议</h3><p>之前我们只考虑了邮件服务器之间使用SMTP进行传输报文，现在考虑用户代理与邮箱服务器之间如何传递报文。在发件方来看，从用户代理到邮箱服务器是一个推过程，需要推协议，SMTP刚好可以按照，因此，在发送方这两者使用SMTP协议。在来看接收方，接收方是在有时间的时候去读邮件，因此是一个拉过程，需要拉协议来支持，因此不能使用SMTP。与之对应的，可以使用的协议有三种：第三版邮局协议（Post Office Protocol-Version 3，POP3）、因特网邮件访问协议（Internet Mail Access Protocol，IMAP）以及HTTP。</p>
+<p><a href="https://s2.ax1x.com/2019/12/18/QHl9js.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/18/QHl9js.png" alt="整体过程"></a></p>
+<h4 id="POP3"><a href="#POP3" class="headerlink" title="POP3"></a>POP3</h4><p>当用户代理（客户机）打开一个到邮件服务器（服务器）端口110上的TCP连接后，POP3就开始工作了。POP3按照三个阶段进行工作：特许（authorization）、事物处理以及更新。</p>
+<p>第一阶段（特许）：用户代理发送（以明文形式）用户名和口令以鉴别用户。</p>
+<p>第二阶段（事务处理）：用户代理取回报文。同时还可以进行：对报文做删除标记，取消报文删除标记，以及获取邮件的统计信息。</p>
+<p>第三阶段（更新）：出现在客户机发出了quit命令后，目的是结束该POP3会话，这时，邮件服务器删除那些被标记为删除的报文。</p>
+<p>在POP3事物处理阶段，用户代理发送一些命令，服务器对每个命令做出回答。回答有两种：+OK（有时后面会有说明文字），服务器用它来指示前面的命令是正常的；-ERR，服务器用它来指示前面的命令出现错误。</p>
+<p>特许阶段主要有两个命令：user username和pass password。下面展示了这个的使用：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$ telnet pop.qq.com 110</span><br><span class="line">Trying 59.37.97.57...</span><br><span class="line">Connected to pop.qq.com.</span><br><span class="line">Escape character is &apos;^]&apos;.</span><br><span class="line">+OK QQMail POP3 Server v1.0 Service Ready(QQMail v2.0)</span><br><span class="line">user 2322253097</span><br><span class="line">+OK</span><br><span class="line">pass ********</span><br><span class="line">-ERR Please using authorized code to login. More information at http://service.mail.qq.com/cgi-bin/help?subtype=1&amp;&amp;id=28&amp;&amp;no=1001256</span><br><span class="line">Connection closed by foreign host.</span><br></pre></td></tr></table></figure>
+
+<p>这里使用的是qq邮箱的POP3服务器。但是由于腾讯做了一个优化，输入密码时，不是之间输入qq密码，而是输入一个授权码，所以这里就报错了。</p>
+<p>事物处理过程中。POP3用户代理发出的命令通常由用户配置为“下载并删除”或者“下载并保留”。主要有四个命令list、retr、delete和quit。命令的语法在RFC 1939中定义。大概使用如下图：</p>
+<p><a href="https://s2.ax1x.com/2019/12/18/QHatoj.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/18/QHatoj.png" alt="POP"></a></p>
+<h4 id="IMAP"><a href="#IMAP" class="headerlink" title="IMAP"></a>IMAP</h4><p>IMAP服务器把每个报文与一个文件夹联系起来，当报文第一次到达服务器时，它被放到收件箱文件夹中。收件人可以把邮件移到一个新的、用户创建的文件夹中，或阅读邮件、删除邮件等。IMAP为用户提供了创建文件夹以及在文件夹中移动邮件的命令。IMAP还为用户提供了在远程文件夹中查询邮件的命令，按指定条件去查询匹配的邮件。IMAP服务器维护了IMAP会话的用户状态信息。</p>
+<p>IMAP运行用户代理获取报文组件的命令。</p>
+<h2 id="DNS，因特网的目录服务"><a href="#DNS，因特网的目录服务" class="headerlink" title="DNS，因特网的目录服务"></a>DNS，因特网的目录服务</h2><p>主机使用IP地址进行标识。一个IP地址由4个字节组成，并有着严格的层次结构。如想127.7.106.83这样，每个字节都被句点分隔开，表示了0~255的二进制数。IP地址具有层次结构是因为我们从左向右扫描时，会得到越来越细的关于主机位于因特网何处的信息。</p>
+<p>主机也可以使用主机名进行标识。不过主机名只有在DNS中注册才有用，别人才能通过DNS获得主机名，因此在DNS中，主机名一定是互异的。</p>
+<h3 id="DNS提供的服务"><a href="#DNS提供的服务" class="headerlink" title="DNS提供的服务"></a>DNS提供的服务</h3><p>域名系统（Domain Name System，DNS）提供进行主机名到IP地址转换的目录服务。</p>
+<p>DNS是：1）一个由分层的DNS服务器实现的分布式数据库；2）一个运行主机查询分布式数据库的应用层协议。DNS协议运行在UDP之上。</p>
+<p>DNS通常由其他应用层协议（如HTTP、SMTP和FTP）所使用，用于将用户提供的主机名解析为IP地址。例如，当请求URL <code>www.someschool.edu/index.html</code>页面时，为了使用户的主机能够将一个HTTP请求发送到Web服务器<code>www.someschool.ed</code>，该用户主机必须获得<code>www.someschool.edu</code>的IP地址。其做法为：</p>
+<ol>
+<li>同一台用户主机上运行着DNS应用的客户机端。</li>
+<li>该浏览器从上述URL中抽取出主机名<code>www.someschool.edu</code>，并将这个主机名传给DNS应用的客户机端。</li>
+<li>该DNS客户机向DNS服务器发送一个包含主机名的请求。</li>
+<li>该DNS客户机最终会收到一份回答报文，包含对于主机名的IP地址。</li>
+<li>一旦浏览器接收到来自DNS的IP地址，它就可以向该IP地址定位的HTTP服务器发起一个TCP连接。</li>
+</ol>
+<p>除了进行主机名到IP地址的转换外，DNS还提供了一些重要服务：</p>
+<ol>
+<li>主机别名（host aliasing）：有着复杂主机名的主机可以用于一个或者多个别名。原始主机名叫做<strong>规范主机名</strong>（canonical hostname）。应用程序可以调用DNS来获得主机别名对于的规范主机名已经主机的IP地址。</li>
+<li>邮件服务器别名（mail server aliasing）：电子邮件应用程序调用DNS，对提供的邮件服务器别名进行解析，以获得该主机的规范主机名以及IP地址。事实上，MX记录允许一个公司的邮件服务器和Web服务器使用相同的（别名化的）主机名。</li>
+<li>负载分配（load distribution）：DNS也用于在冗余的服务器之间进行负载分配。繁忙的站点被冗余分别在多台服务器上，每台服务器均运行在不同的端系统上，有着不同的IP地址。对于这些冗余的服务器，一个IP地址集合对应于同一个规范主机名。DNS数据库存储着这些IP地址集合。当客户机为映射到这个IP地址集合的名字发出一个DNS请求时，该服务器用包含全部这些地址的报文进行回答，但每个回答中旋转这些地址的顺序。客户机通常总是向IP地址排在最前面的服务器发送请求，所以DNS就在所有冗余的服务器之间旋转分配负载。</li>
+</ol>
+<h3 id="DNS工作机理"><a href="#DNS工作机理" class="headerlink" title="DNS工作机理"></a>DNS工作机理</h3><p>应用程序调用DNS的客户机端，并指明要转换的主机名，用户主机上的DNS接收到后，向网络中发送一个DNS查询报文。所有DNS请求和回答报文使用UDP数据报经端口53发送。经过若干毫秒时延后，用户主机上的DNS接收到一个DNS回答报文，这个结果被递送到调用DNS查询的应用程序中。</p>
+<p>DNS的一种简单设计方式是在因特网上只使用一个DNS服务器，该服务器包含所有映射。但是这样会有很多问题：</p>
+<ol>
+<li>单点故障：如果该服务器崩溃，整个因特网随之瘫痪。</li>
+<li>通信容量：单个DNS服务器不得不处理所有DNS查询。</li>
+<li>远距离的集中式分布：单个服务器不可能接近所有查询的客户机，因此会造成严重的时延。</li>
+<li>维护：单个服务器将不得不为所以的因特网主机保留记录。使得整个中央数据库非常庞大，而且不得不解决为每个新添加的主机而频繁更新。</li>
+</ol>
+<p>为此，DNS采用了分布式设计方案，DNS是因特网上实现分布式数据库的典范。</p>
+<p><a href="https://s2.ax1x.com/2019/12/19/Qq8xII.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/19/Qq8xII.png" alt="DNS"></a></p>
+<h4 id="分布式、层次数据库"><a href="#分布式、层次数据库" class="headerlink" title="分布式、层次数据库"></a>分布式、层次数据库</h4><p>有三类DNS服务器：根DNS服务器、顶级域（Top-Level Domain，TLD）DNS服务器和权威DNS服务器。他们以上图这样组织（有点像HASH的感觉）。此时查询过程为，以<code>www.Amazon.com</code>举例。首先客户机联系根DNS服务器之一，它返回顶级域名com的TLD服务器IP地址。该客户与这些TLD之一联系，它将为<code>amazon.com</code>返回权威服务器的IP地址。最后，该客户家联系权威服务器，它为<code>www.Amazon.com</code>返回IP地址。</p>
+<p><strong>根服务器</strong>：因特网上存在13个根服务器（标号A到M）。尽管我们将这13个每个视为单独的服务器，但每台“服务器”实际上是冗余服务器集群，以提供安全性和可靠性。</p>
+<p><strong>顶级域服务器</strong>：这些服务器负责顶级域名如（com、org、net、edu和gov）和所有国家的顶级域名。</p>
+<p><strong>权威DNS服务器</strong>：在因特网上具有公共可访问（如Web服务器和邮件服务器）的每个组织机构必须提供公共可访问的DNS记录，这些记录将这些主机的名字映射为IP地址。由组织机构的权威DNS服务器来保持这些记录，或者支付费用将这些记录存储在某个服务提供商的权威DNS服务器中。</p>
+<p>除了上面三种以外，还有一类重要的DNS，称为本地DNS服务器。本地DNS服务器严格来说不属于DNS服务器的层次结构。当主机发出DNS请求时，该请求首先被发往本地DNS服务器，它起着代理的作用，并将该请求转发到DNS服务器层次结构中。本地DNS服务器工作方式如下图：</p>
+<p><a href="https://s2.ax1x.com/2019/12/19/QqNNHe.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/19/QqNNHe.png" alt="local DNS"></a></p>
+<p>主机发送请求后，首先定向的本地DNS中，本地DNS联系根DNS，获得对应的TLD，在联系对应的TLD，获得权威服务器，再联系权威服务器，获得IP，返回给请求主机。</p>
+<p>TLD服务器不一定知道每台主机的权威DNS服务器的IP地址。TLD服务器只知道中间的某个DNS服务，该中间服务器依次才能知道用于该服务器的权威DNS服务器。</p>
+<p>上图展示的例子是递归查询（recursive query）和迭代查询（iteration query）。主机到本地服务器是递归，本地到后面的三个查询是迭代。理论上将，查询可以是完全递归的，如下图：</p>
+<p><a href="https://s2.ax1x.com/2019/12/19/QqwuKx.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/19/QqwuKx.png" alt="recursive"></a></p>
+<h4 id="DNS缓存"><a href="#DNS缓存" class="headerlink" title="DNS缓存"></a>DNS缓存</h4><p>为了改善时延性并减少在因特网上到处传输的DNS报文数量，DNS广泛使用了缓存技术。DNS缓存（DNS caching）原理十分简单：在请求链中，当一个DNS服务器接收到一个DNS回答时，DNS将回答中的信息缓存在本地存储器中。由于主机和主机名与IP地址映射不是永久的，所以DNS服务器在一段时间后将丢弃缓存信息。</p>
+<h3 id="DNS记录和报文"><a href="#DNS记录和报文" class="headerlink" title="DNS记录和报文"></a>DNS记录和报文</h3><p>实现DNS分布式数据库的所有DNS服务器共同存储着<strong>资源记录</strong>（Resource Record，RR），RR提供了主机名到IP地址的映射。每个DNS回答报文包含了一条或多条资源记录。</p>
+<p>资源记录是一个包含了下列字段的4元组：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">(Name, Value, Type, TTL)</span><br></pre></td></tr></table></figure>
+
+<p>TTL是该记录生存时间，它决定了资源记录应当从缓存中删除的时间。Name和Value的值取决于Type：</p>
+<table>
+<thead>
+<tr>
+<th align="left">Type</th>
+<th align="left">Name含义</th>
+<th align="left">Value含义</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">A</td>
+<td align="left">主机名</td>
+<td align="left">IP地址。</td>
+</tr>
+<tr>
+<td align="left">NS</td>
+<td align="left">域（如<code>foo.com</code>）</td>
+<td align="left">知道如何获得该域中主机IP地址的权威DNS服务器主机名。</td>
+</tr>
+<tr>
+<td align="left">CNAME</td>
+<td align="left">别名</td>
+<td align="left">规范主机名</td>
+</tr>
+<tr>
+<td align="left">MX</td>
+<td align="left">别名</td>
+<td align="left">邮件服务器的规范主机名</td>
+</tr>
+</tbody></table>
+<p>为了获得邮件服务器的规范主机名，应该请求一条MX记录，为了获得其他服务器主机名应该请求一条CNAME记录。</p>
+<p>如果一台DNS服务器是指定某特定主机的权威DNS服务器，那么该DNS服务会有一条包含该主机名的A记录。如果DNS服务器不是某个主机名的权威DNS服务器，那么该服务器包含一条NS记录（我觉得NS记录应该不是在服务器中存储的，应该是更具请求生成的），该记录对应于包含主机名的域；还有一条A记录，该记录提供了在NS记录中的Value字段中DNS服务器的IP地址。</p>
+<h4 id="DNS报文"><a href="#DNS报文" class="headerlink" title="DNS报文"></a>DNS报文</h4><p>DNS只有两种报文，并且查询和回复有着相同的格式，如下图：</p>
+<p><a href="https://s2.ax1x.com/2019/12/19/Qq2Mp8.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/19/Qq2Mp8.png" alt="DNS packet"></a></p>
+<p>DNS报文中各字段语义如下</p>
+<p>1）前12个字节是首部区域，其中有几个字段。第一个字段是16比特的数，用于标识该查询。这个标识符会被复制到对查询的回答的报文中，以便让客户机用它来匹配发送的请求和接收到的回答。标识字段中有多个标志。1比特的“查询/回答”标识位指出是查询报文（0）还是回答报文（1）。当某DNS服务器正好是被请求主机的权威DNS服务器时，1比特的“权威的”标识位被置位在回答报文中。如果客户机（主机或者DNS服务器）希望DNS服务支持递归查询，将设置1比特的“希望递归”标志位。如果该DNS服务器支持递归查询，则回答报文中会对1比特的“递归可以”标志位置位。在该首部还有4个“数量”字段，指出在首部后四类数据区出现的数量。</p>
+<p>2）问题区域包含着正在进行的查询信息。该区域包括：1.名字字段，用于指出正在被查询的主机名字。2.问题字段，用于指出正被查询的问题类型（A、MX等）。</p>
+<p>3）来自DNS服务器的回答报文中，回答区域包含了对最初请求的名字的资源记录（RR）。一个回答报文的回答区域可能有多条RR，因为一个主机名可能对应多个IP地址。</p>
+<p>4）权威区域包含了其他权威DNS服务器的记录。</p>
+<p>5）附加区域包含了一些有帮助的信息。</p>
+<p>可以使用<code>nsloopup</code>程序来进行DNS查询。该程序的使用命令是：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">nslookup -qt=type domain [DNS-server];</span><br><span class="line">//例如</span><br><span class="line">nslookup -qt=mx baidu.com 8.8.8.8</span><br></pre></td></tr></table></figure>
+
+<h4 id="在DNS数据库中插入记录"><a href="#在DNS数据库中插入记录" class="headerlink" title="在DNS数据库中插入记录"></a>在DNS数据库中插入记录</h4><p>当向某些注册登记机构注册域名<code>networkutopia.com</code>时，需要向该机构提供基本权威DNS服务器和辅助权威DNS服务器的名字和IP地址（不是域名本身的IP地址）。假定该名字和IP地址是<code>dns1.networkuptopai.com</code>和<code>dns2.networkuptopai.com</code>已经<code>212.212.212.1</code>和<code>212.212.212.2</code>。对这两个权威DNS服务器的每一个，该注册机构确保将一个类型NS和一个类型A的记录输入到TLD com服务器。如：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">(networkuptopia.com,dns1.networkuptopai.com,NS)</span><br><span class="line">(dns1.networkuptopai.com, 212.212.212.1, A)</span><br></pre></td></tr></table></figure>
+
+<p>此时查询时，首先TLD com回复本地DNS一个NS信息，而后本地DNS再次查询TLD com获取含义<code>networkuptopia.com</code>的权威服务器地址，这里是<code>212.212.212.1</code>。而后查询权威DNS服务器来获取IP地址。</p>
+<h2 id="P2P应用"><a href="#P2P应用" class="headerlink" title="P2P应用"></a>P2P应用</h2><h3 id="P2P文件分发"><a href="#P2P文件分发" class="headerlink" title="P2P文件分发"></a>P2P文件分发</h3><p>在P2P文件分发中，每个对等方都能够重新分发其所有的该文件的任何部分，从而协助服务器进行分发。</p>
+<h4 id="P2P体系结构的扩展性"><a href="#P2P体系结构的扩展性" class="headerlink" title="P2P体系结构的扩展性"></a>P2P体系结构的扩展性</h4><p>下图展示了文件分发的示意图，其中所有字母的含义如图所示：</p>
+<p><a href="https://s2.ax1x.com/2019/12/19/QLP6Qf.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/19/QLP6Qf.png" alt="file"></a></p>
+<p>对于客户机/服务器的体系结构来说，将文件传输给所有客户机总时间受两个限制，一个是服务器上传N份文件所需要的总时间，另一个是下载最慢的服务器下载整个文件所需时间，因此客户机/服务器体系结果总的分发时间满足：<br>$$<br>D_{cs} &gt;= max{\frac{NF}{u_s}, \frac{F}{d_{min}}}<br>$$<br>对于P2P体系结构来说，分发总时间受三方面限制，第一是服务器发送一份完整的文件出去的时间，第二是下载最慢的主机下载完文件的时间，第三是所有主机上传N份文件的时间。因此P2P文件分发时间满足：<br>$$<br>D_{P2P} &gt;= max{\frac{F}{u_S},\frac{F}{d_{min}}, \frac{NF}{u_s+\sum_i^N{u_i}}}<br>$$</p>
+<h4 id="BitTorrent"><a href="#BitTorrent" class="headerlink" title="BitTorrent"></a>BitTorrent</h4><p>BitTorrent是一种用于文件分发的流行P2P协议。用BitTorrent的术语来说，参与一个特定文件分发的所有对等方的集合称为一个洪流（torrent）。每个洪流具有一个基础设施节点，称为追踪器。当一个对等方加入洪流时，它向追踪器注册，并周期性的通知追踪器它任然在洪流中。追踪器以这种方式跟踪洪流中的对等方。</p>
+<p><a href="https://s2.ax1x.com/2019/12/19/QLeTqx.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/19/QLeTqx.png" alt="BitTorrent"></a></p>
+<p>当新对等方加入洪流时，追踪器随机的从对等方集合中选择一些对等方，如50个，并将这50个对等方的IP地址发送给新的对等方。新的对等方持有对等方的这张列表，试图与该列表上的所有对等方创建并行的TCP连接。我们称所有与新对等方成功建立TCP连接的对等方为“邻近对等方”。</p>
+<p>这里新的对等方为Alice。Alice周期性地询问每个邻近对等方它们所具有的块列表。如果Alice有L个邻近对等方，那么将会获得L个块列表，此时其就可以对自己当前还没有的块发出请求。</p>
+<p>Alice将做两个决定，第一，她应该向她的邻居请求那些块？第二，她所拥有的块应该发送给哪个邻居。</p>
+<p>对于请求哪个块，Alice采用一种称为最罕见原则（rarest first）。该原则思想是，根据她没有的块从她的邻居中确定那些最稀缺的块（即L列表中出现最少的块），并优先请求最稀缺的块。这样，最稀缺的块更迅速地重新分发，其目标是均衡每个块在洪流中拷贝数量。</p>
+<p>为了决定她响应哪个请求，基本想法是Alice确定其邻居的优先权，这些邻居是那些当前能够以最高的速率供给它数据的。特别的，Alice对于她的每个邻居都持续地测量接收到比特的速率，确定以最高速率流入的四个邻居，然后，她将数据发给这4个邻居。每过10秒，她重新计算该速率并可能修改这四个对等方。更重要的是，每过30秒，她要随机地选择一个另外的邻居并向他发送块。我们将这个随机的对等方称为Bob。因为Alice给Bob发送数据，所以她可能成为Bob前4位上载者之一，这样Bob向Alice传输数据。如果Bob向Alice发送数据速率足够高，他也可能成为Alice的前四个上载者之一。换言之，每过30秒，Alice随机选择一个新的对等方并开始传输数据。如果这两个对等方都满足此对换要求，那么会将对方放入到其前四位列表中并继续与对方进行对换，直到对等方之一发现更好的伙伴为止。</p>
+<h3 id="在P2P区域中搜索信息"><a href="#在P2P区域中搜索信息" class="headerlink" title="在P2P区域中搜索信息"></a>在P2P区域中搜索信息</h3><h4 id="集中式索引"><a href="#集中式索引" class="headerlink" title="集中式索引"></a>集中式索引</h4><p>在集中式索引中，由一台大型服务器（或服务器场）来提供索引服务。该方法存在几个缺点：</p>
+<ol>
+<li>单点故障：服务器崩溃，整个P2P崩溃。</li>
+<li>性能瓶颈好基础设施费用。</li>
+<li>侵犯版权。</li>
+</ol>
+<h4 id="查询洪泛"><a href="#查询洪泛" class="headerlink" title="查询洪泛"></a>查询洪泛</h4><p>查询洪泛是建立在Gnutella协议之上的。在Gnutella中，对等方形成一个抽象的逻辑网络，该网络被称为覆盖网络。如果对等方X和对等方Y维护了一个TCP连接，那么我们说X和Y之间有一条边。在这种设计中，对等方通过已经存在的TCP连接，向覆盖网络中相邻的对等方发送报文。当Alice要定位一个文件位置时，她向所有邻居发送一条查询报文。Alice的邻居向它们的所有邻居转发该报文，邻居的邻居会接着转发。当一个对等方接收到查询报文时，将检测查询内容是否与可供共享的任何文件相匹配，如果存在匹配，则按查询的路径反向传播回去，向Alice回送一条查询命中（递归式）。、</p>
+<p>该方法会在网络中产生大量流量，为解决该问题使用了范围受限查询洪泛。具体来说，就是在查询时添加一个计数，每到下一层就将计数减一。如果到0了，即使没有查到也不再向外扩散。</p>
+<p>这里讨论当X加入覆盖网络的过程：</p>
+<p>1）对等方要首先发现某些已经位于覆盖网络的其他对等方。解决这种引导跨接问题的方法之一是，让X维护一张对等方列表（IP地址），这些对等方常在覆盖网络中开机；另一种方法是，X能够联系维护这种列表的跟踪站点。</p>
+<p>2）一旦访问了这样一张表，X接下来试图与该表上的对等方建立一个TCP连接，直到与某个对等方Y创建连接为止。</p>
+<p>3）对等方向Y发送一个Ping报文，该ping报文包括对等方计数字段。Y接收到Ping后转发ping，直到Ping等于0.</p>
+<p>4）只要一个对等方Z接收到ping，它通过覆盖网络向X发送一个pong报文，该报文包含Z的IP地址。</p>
+<p>5）当X接收到pong报文后，就知道到了网络中许多的IP地址，可以建立连接。</p>
+<h4 id="层次覆盖"><a href="#层次覆盖" class="headerlink" title="层次覆盖"></a>层次覆盖</h4><p>层次覆盖结合了上述两种方法的优秀特征。层次覆盖不使用专用的服务器来跟踪和索引文件。在层次覆盖中并非所有对等方是平等的，具有高速连接并具有高可用性的对等方被指定为超级对等方。每个非超级对等方都被指定为一个超级对等方的子对等方。一个新的对等方与超级对等方建立一个TCP连接，新对等方将可共享文件告诉超级对等方。这样，每个超级对等方就成为一个小的索引。超级对等方之间互相建立TCP连接，从而形成覆盖网络。超级对等方可以向其邻居超级对等方转发查询。该方法类似于查询洪泛，但覆盖网络中超级对等方仅使用了受限查询洪泛。</p>
+<h3 id="分布式散列表"><a href="#分布式散列表" class="headerlink" title="分布式散列表"></a>分布式散列表</h3><p>在该书第六版中将前一节的三部分全部删除了，添加了一个分布式散列表用来P2P区域中搜索。说明该方法应该是当前最好使的，使用最广泛的，前三个可能已经弃用了。但是第七版又把这个也删了，表示很迷。</p>
+<p>分布式散列表（Distributed Hash Table，DHT）是一个分布式数据库，在数以万计的对等方中存储（键，值）对。在每个对等方将保持（键，值）对仅占总体的一个小子集，允许任何对等方使用一个特别的键查询该分布式数据库。分布式数据库则能够定位拥有该相应（键，值）对的对等方，然后向查询的对等方返回该（键，值）对。任何对等方也将允许在数据库中插入新键值对。</p>
+<p>首先为每个对等方分配一个标识符，其中每个标识符是一个[0, 2^n-1]范围内的整数，n取某些固定的值。我们也要求键是同一范围内的一个整数。通过散列函数将键映射到该范围。</p>
+<p>现在考虑DHT中存储（键，值）对问题，该问题核心是对等方键的分配。给定每一个对等方一个整数标识符，每个键也会被映射到标识符对应的范围。这里需要定义“最近邻”，最近邻是指键的最邻近后继。假设n是4，键都落在[0,15]之内，假设该对等方存在8个对等方，标识符分别为1、 3、 4、 5、 8、 10、 12和15，此时要存储（11，something）时，就一个存储在标识符为12的对等方上。</p>
+<p>当我们要插入一个键值对时，之间通过计算该存储放到哪个对等方（假如可以获得），然后之间联系该对等方是可以的，但是这有个规模的问题，这样的话要求每个对等方存储所有其他对等方的IP，这是不合理的。为此，我们设计了环形DHT。</p>
+<h4 id="环形DHT"><a href="#环形DHT" class="headerlink" title="环形DHT"></a>环形DHT</h4><p><a href="https://s2.ax1x.com/2019/12/20/QXZncd.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/20/QXZncd.png" alt="DHT"></a></p>
+<p>这里我们将对等方组织成一个环，每个对等方只需要与它的直接后继和直接前驱联系（环状双向链表）。当对等方3要确定谁复制11时，首先其生成一个报文传递给其后继，该报文沿顺时针方向传输。每个接收到该报文的对等方，由于知道其前驱节点和后继节点因此知道是否该由自己负责该键值对，如果不负责，则将报文传递给后继节点。直到找到该负责次节点的对等方为止。（问题1：如果DHT中没有大于该键的最近邻咋办？可能进入DHT的第一个对等方与服务器连接时，被分配为标识符为2^n-1）</p>
+<p>只有前驱和后继也造成了一个问题是，每次查询和插入的平均发送N/2条报文。这也是不太合理的，因此每个对等方要跟踪的邻居数量与DHT为解析一个查询而需要发送的 报文数量之间存在着折中。细化方案之一是以环形网络为基础，但添加捷径，使每个对等方不仅联系其直接前驱和直接后继，而且联系分部在环上的捷径对等方。如上图的b，此时当某个对等方收到报文时，不仅传输给后继报文，也传递给与其相连的捷径上。</p>
+<p>研究表明，DHT能够被设计成每个对等方的邻居数量以及每个请求报文数量均为O(logN)。这是一种比较令人满意的折中。问题2：哪些对等方被选则为捷径的目标节点，以及如何获取这些对等方的IP）</p>
+<h4 id="对等方的扰动"><a href="#对等方的扰动" class="headerlink" title="对等方的扰动"></a>对等方的扰动</h4><p>在DHT中，对等方可以不加警示的到来和离开，为了处理这个问题，我们要求对等方要知道其第一个和第二个后继，以及要周期性的证实它的两个后继是否存活（如周期性发送ping报文并寻求响应）。现在假设上图a中5突然离开，此时,5将不在响应ping报文，在离开之前的对等方3和4知道了5离开，此时4和3将更新其后继信息。(4先更新，再更新3）问题3：离开的对等方里面存储的键值对如何再被重新分配，还有以该对等方为捷径的对等方如何更新捷径</p>
+<p>下面讨论一个对等方加入时发送的事情，新的对等方加入时，会知道编号最小的已经存在的对等方的IP，这里是1（应该是有一个服务器来维护这个信息，每个对等方进入DHT时，首先联系该服务器）。然后向该对等方发送查询信息，获得其前驱和后继（可能这个时候也可以创建捷径，但具体操作呢）。而后插入进去，即可。</p>
+<p>更多关于DHT的内容可以查看Kademlia相关内容。</p>
+<h1 id="第三章-运输层"><a href="#第三章-运输层" class="headerlink" title="第三章 运输层"></a>第三章 运输层</h1><h2 id="概述和运输层服务"><a href="#概述和运输层服务" class="headerlink" title="概述和运输层服务"></a>概述和运输层服务</h2><p>运输层协议为运行在不同主机上的应用进程提供了逻辑通信。运输层在端系统中实现而不是在网络路由器中实现。在发送方，运输层接收来自上层的的报文转换成运输层分组：将应用报文换分为较小的块，并为每一块加上运输层首部来创建运输层报文段。在发送方体统中，运输层将这些报文段传输给网络层，网络层将其分装进网络层分组并向目的地发送。网络路由器只作用于数据报的网络层字段，即他们不检查分装在该数据报的运输层报文段的字段。</p>
+<h3 id="运输层与网络层的关系"><a href="#运输层与网络层的关系" class="headerlink" title="运输层与网络层的关系"></a>运输层与网络层的关系</h3><p>运输层为运行在不同主机上的进程之间提供逻辑通信，而网络层提供了主机之间的逻辑通信。运输层协议只工作在端系统。运输层协议所能提供的服务也受到底层网络层协议的服务模型的限制，然而，即使网络层不提供响应的服务，运输层协议也能提供某些服务。</p>
+<h3 id="因特网运输层概述"><a href="#因特网运输层概述" class="headerlink" title="因特网运输层概述"></a>因特网运输层概述</h3><p>运输层为应用层提供了两种截然不同的协议：UDP（用户数据报协议）和TCP（传输控制协议），前者提供一种不可靠的无连接服务，后者提供了一种可靠的面向连接的服务。</p>
+<p>网络层协议叫IP（网际协议），IP为主机之间提供了逻辑通信。IP的服务模型是尽力而为交付服务（best-effort delivery service）。即IP尽最大努力交付报文段，但不作任何保证。特别的，它不确保报文段的交付，不确保报文段的按序交付，不确保报文段的完整性。因此IP被称为不可靠服务。每台主机至少有一个网络层地址，即所谓的IP地址。</p>
+<p>TCP和UDP的基本任务：将两个端系统间IP的交付服务扩展到运行在两个端系统的进程之间的交付服务。将主机间交付扩展到进程间交付，称为运输层的多路复用与多路分解。UDP和TCP还通过在其报文段首部添加差错检测字段而提供完整性检查。进程数据交付和差错检测是两种最低限度的运输层服务，也是UDP所提供的仅有的两种服务。</p>
+<p>TCP还提供几种附加的服务，首先提供了可靠数据传输。通过使用流量控制、序号、确认和定时器等技术。TCP确保正确的、按序的将数据从发送进程交付到接收进程，这样TCP将两个端系统之间不可靠的IP服务转换为一种可靠的进程间数据传输服务。TCP还提供拥塞控制，TCP拥塞控制防止任何一条TCP连接用过多流量来淹没通信主机之间的链路和交换设备。</p>
+<h2 id="多路复用与多路分解"><a href="#多路复用与多路分解" class="headerlink" title="多路复用与多路分解"></a>多路复用与多路分解</h2><p>进程有一个或多个套接字，它相当于从网络向进程传递数据和从进程向网络传递数据的门户。</p>
+<p>首先考虑接收主机如何如何将一个收到的运输层报文定向到合适的套接字。为实现这一要求，每个运输层报文段中设置几个字段，在接收端，运输层检测这些字段并标识出接收套接字，然后将报文段定向到该套接字。将运输层报文段中的数据交付到正确的套接字的工作称为多路分解。从源主机的不同套接字中收集数据块，并为每一个数据库封装上首部信息从而生成报文段，然后将报文段传递到网络层的工作叫做多路复用。</p>
+<p>运输层多路复用的要求：</p>
+<ol>
+<li>套接字有唯一标识符。</li>
+<li>每个报文段有特殊字段来指示该报文段要交付的套接字。</li>
+</ol>
+<p><a href="https://s2.ax1x.com/2019/12/24/lCcy9g.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lCcy9g.png" alt="packet"></a></p>
+<p>端口号是一个16比特的数字，其大小在0~65535之间。[0,1023]的端口被称为周知端口，是受严格限制的。</p>
+<h3 id="无连接的多路复用与多路分解"><a href="#无连接的多路复用与多路分解" class="headerlink" title="无连接的多路复用与多路分解"></a>无连接的多路复用与多路分解</h3><p>创建UDP套接字时，运输层自动为套接字分配一个端口号（也可以自己指定）。</p>
+<p>一个UDP套接字是由一个包含目的IP地址和目的端口号的二元组来全面标识。</p>
+<h3 id="面向连接的多路复用与多路分解"><a href="#面向连接的多路复用与多路分解" class="headerlink" title="面向连接的多路复用与多路分解"></a>面向连接的多路复用与多路分解</h3><p>TCP套接字是由一个四元组（源IP地址，源端口号，目的IP地址，目的端口号）来标识的。特别的，两个具有不同源IP地址或源端口的到达的TCP报文段将被定向到两个不同的套接字，除非TCP请求了初始创建连接的请求。</p>
+<h2 id="无连接传输：UDP"><a href="#无连接传输：UDP" class="headerlink" title="无连接传输：UDP"></a>无连接传输：UDP</h2><p>UDP只做了运输协议能够做的最少工作。除了多路复用/多路分解功能以及一些轻型的差错检验外，几乎没有对IP增加别的东西。使用UDP时，在发送报文段之前，发送方和接收方的运输层实体之间没有进行握手，因此UDP被称为无连接的。</p>
+<p>使用UDP的原因：</p>
+<ol>
+<li>应用层可以更好的控制要发送的数据和发送的时间。UDP不提供拥塞控制，数据传递给UDP后会立即打包并传递给网络层。</li>
+<li>无需建立连接：因此不会引入建立连接的时延。</li>
+<li>无连接状态：TCP需要在端系统中维护连接状态，UDP不维护连接状态，某些应用专门使用UDP以便能够支持更多的活动客户机。</li>
+<li>分组首部开销小。</li>
+</ol>
+<h3 id="UDP报文段结构"><a href="#UDP报文段结构" class="headerlink" title="UDP报文段结构"></a>UDP报文段结构</h3><p><a href="https://s2.ax1x.com/2019/12/24/lCIr4I.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lCIr4I.png" alt="UDP struct"></a></p>
+<p>应用数据是应用层传递来的数据。通过端口号可以使目的主机将应用数据交付到运行在目的端系统的相应进程。接收主机使用校验和来检查报文段中是否存在差错。</p>
+<h3 id="UDP校验和"><a href="#UDP校验和" class="headerlink" title="UDP校验和"></a>UDP校验和</h3><p>UDP校验和提供了差错检验功能，即检验和用于确定当UDP报文段从源主机到达目的时，其中的比特是否发送变化（例如，由于链路中或者路由器中存储数据时的噪声干扰）。发送方的UDP对报文中的所有16比特字的和进行反码运算，求和时遇到的所有溢出都要被回卷，得到的结果放到UDP报文段中的校验和字段。</p>
+<p>举例：</p>
+<p>假定我们有3个16比特字：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">0110011001100000</span><br><span class="line">0101010101010101</span><br><span class="line">1000111100001100</span><br></pre></td></tr></table></figure>
+
+<p>此时求和过程为：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">0110011001100000</span><br><span class="line">0101010101010101 +</span><br><span class="line">----------------------</span><br><span class="line">1011101110110101</span><br><span class="line">1000111100001100 +</span><br><span class="line">----------------------</span><br><span class="line">0100101011000010</span><br></pre></td></tr></table></figure>
+
+<p>注意，这里第二次相加时，最高位溢出，回卷加到最低位。反码是将所有0换成1，1换成0。所以此时该UDP报文的校验和是<code>1011010100111101</code>。在接收方将全部4个比特字（包括校验和）一起相加。如果分组中无差错，则这个和全是1，否则存在一个0就表面分组中出现错误。</p>
+<p>某些UDP实现只是丢弃受损的报文段，其余实现是将受损的报文段交给应用程序并警告。</p>
+<h2 id="可靠数据传输原理"><a href="#可靠数据传输原理" class="headerlink" title="可靠数据传输原理"></a>可靠数据传输原理</h2><p><a href="https://s2.ax1x.com/2019/12/24/lCbn0S.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lCbn0S.png" alt="reliable"></a></p>
+<p>上图说明了我们数据传输的接口。通过rdt_send()函数，可以调用数据传输协议的发送方。它将要发送的数据交付给接收方上层（rdt表示可靠数据传输协议，_send表名发送方被调用）。在接收方，当分组从信道的接收端抵达时，调用rdt_rcv()。当rdt协议想向上层交付数据时，通过调用deliver_data()完成。</p>
+<p>本节中，只考虑单向数据传输的情况，从发送方到接收方。可靠的双向数据传输的情况从概念上讲不会更难。rdt的发送和接收方都需要通过调用udt_send()发送分组给对方（其中udt表示不可靠传输协议）。</p>
+<h3 id="构造可靠传输协议"><a href="#构造可靠传输协议" class="headerlink" title="构造可靠传输协议"></a>构造可靠传输协议</h3><h4 id="完全可靠信道上的可靠数据传输协议：rdt1-0"><a href="#完全可靠信道上的可靠数据传输协议：rdt1-0" class="headerlink" title="完全可靠信道上的可靠数据传输协议：rdt1.0"></a>完全可靠信道上的可靠数据传输协议：rdt1.0</h4><p>首先考虑最简单的情况，即底层信道是完全可靠的。下图展示了rdt1.0发送方和接收方的有限状态机(FSM)定义：</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPVAaQ.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPVAaQ.png" alt="rdt1.0"></a></p>
+<p>FSM箭头指示了从一个状态变迁到另一个状态。上图发送方和接收方都只有一个状态。此时，有完全可靠的信道，接收方就不需要提供任何反馈给发送方了。</p>
+<h4 id="具有比特差错信道上的可靠数据传输：rdt2-0"><a href="#具有比特差错信道上的可靠数据传输：rdt2-0" class="headerlink" title="具有比特差错信道上的可靠数据传输：rdt2.0"></a>具有比特差错信道上的可靠数据传输：rdt2.0</h4><p>更底层信道模型是分组中比特可能受损。</p>
+<p>首先考虑人们对于该问题的处理。通常情况下，接收者听到、明白、记下每句话可以说“OK”。如果消息接收者听到一句含糊不清的话，可能请求重复那句话。这种口头消息协议使用了肯定确认（positive acknowledgment）与否定确认（negative acknowledge）。在计算机网络中基于这种重传机制的可靠数据传输协议称为自动重传请求（Automatic Repeat reQuest，ARQ）协议。</p>
+<p>一般来说，ARQ协议中需要另外三种协议来处理存在的比特差错：</p>
+<ol>
+<li>差错检测：运输层添加的校验和字段。还有别的方式。</li>
+<li>接收方发送反馈：回复肯定确认（ACK）还是否定确认（NAK）。</li>
+<li>重传：接收方收到有差错的分组，发送方重传。</li>
+</ol>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPepB8.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPepB8.png" alt="rdt2.0"></a></p>
+<p>注意，当发送方在<code>wait-for-ACK-orNAK</code>状态时，它不能从上层获得更多的数据，也就是说，rdt_send()不会出现，仅当收到ACK并离开该状态时才能继续获得数据。因此发送方不会发送一块新数据，直到发送方确信接收方已经正确接收到当前分组为止。由于这种行为，类似于rdt2.0的协议被称为停等（stop-and-wait）协议。</p>
+<p>rdt2.0存在一个致命的缺陷，即没有考虑到ACK或NAK分组受损的可能性。处理ACK与NAK受损时要考虑以下三种可能解决方案：</p>
+<ol>
+<li>接收到ACK或NAK受损的一方，再次发送NAK，即数据受损，但这样会无线循环下去，该方式不行。</li>
+<li>增加足够的检验和比特使发送方不但能够检测比特受损，还可以恢复当前分组。</li>
+<li>当发送方收到含糊不清的ACK或NAK时，只用重发当前数据分组即可。但这种方法在接收方到发送方中引入了冗余分组（duplicate packet）。冗余分组的根本困难在于接收方不知道它上次发送的ACK或NAK是否被发送方正确地收到，因此它无法事先知道接收到的分组是新的还是一次重发的。</li>
+</ol>
+<p>现在普遍采用的是方法三，这里解决冗余分组的方法是在数据中添加一个新字段，让发送方对其数据分组进行编号，即将发送的数据分组序号放在该字段。此时接收方只需检查序号即可知道是重传的一个还是新发的一个。对于停等协议，只需要1比特序号就足够了。</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPMAOI.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPMAOI.png" alt="rdt2.1 sender"></a></p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPMk6A.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPMk6A.png" alt="rdt2.1 receiver"></a></p>
+<p>对于发送方来说，发送完成之后等待对该次分组的确认，如果接收到的确认消息被损坏或者是NAK则重发，直到收到未被损坏的确认消息且确认消息为ACK，则进入下一个状态（等待下一次调用）。</p>
+<p>对于接收方来说，接收到数据被损坏就会发送NAK并等待重发的数据。直到重发的数据没有被损坏，则发送ACK确认，并进入下一个状态（等待接收下一个分组）。如果接收到的分组不是现在等待的分组，则说明前一个ACK消息被损坏，发送方又重发了一个已经接收到的消息，且发送方未正确进入到下一个状态（因为没有正确接收到ACK），于是接收方此时应该再次发送ACK确认信息即可，直到发送方正确接收到ACK并进入了下一个状态发送了分组。</p>
+<p>再进一步，我们希望只有ACK确认信号而没有NAK信号，此时我们只需要在ACK信号上再绑定应该序号即可，此时也能实现上面的要求，此时在发送方如果收到了要等待的ACK对应的编号与实际收到的不一致时，等同于收到了NAK信号（发送的ACK信号对应编号是已经确认收到的信号，与要等待的不一致说明当前这次发送的分别没有被正确接收），需要重复。</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lP39HI.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lP39HI.png" alt="rdt2.2 sender"></a></p>
+<h4 id="具有比特差错的丢包信道上的可靠数据传输：rdt3-0"><a href="#具有比特差错的丢包信道上的可靠数据传输：rdt3-0" class="headerlink" title="具有比特差错的丢包信道上的可靠数据传输：rdt3.0"></a>具有比特差错的丢包信道上的可靠数据传输：rdt3.0</h4><p>现在假定处理比特受损外，底层信道还有可能丢包。这里，我们让发送方负责检测和恢复丢包。假设发送方传输一个数据分组，分组本身丢包或者接收分组后确认分组的ACK发生丢失。这两种情况下，发送方都收不到应当到来的响应。如果发送方愿意等待足够长时间以便确认分组已丢失，则只需要重传该分组即可。</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lP8HfK.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lP8HfK.png" alt="rdt2.2 3.0 receiver"></a></p>
+<p>上图的接收到即适合与rdt2.2也适合与接下来的rdt3.0。</p>
+<p>从发送方角度来看，重传是万能的，发送方不知道一个数据分组丢失、一个ACK丢失，还是该分组或ACK只是过度迟延。在所有情况下采用相同动作，即重传。为实现基于时间的重传机制，需要一个倒数计时器（countdown time），在一个给定的时间过期后，可中断发送方。因此发送方需要能做到：</p>
+<ol>
+<li>每次发送一个分组（即第一次分组和重传分组）时便启动一个定时器。</li>
+<li>响应定时器中断（采取适当的动作）。</li>
+<li>终止定时器。</li>
+</ol>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPJ2qJ.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPJ2qJ.png" alt="rdt3.0"></a></p>
+<p>这里在等待上层调用时会收到ACK是因为冗余数据导致的，因此可直接忽略。</p>
+<p>下图展示了rdt3.0所遇到各种情况是如何工作的：</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPJqqH.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPJqqH.png" alt="rdt3.0"></a></p>
+<h3 id="流水线可靠数据传输协议"><a href="#流水线可靠数据传输协议" class="headerlink" title="流水线可靠数据传输协议"></a>流水线可靠数据传输协议</h3><p>rdt3.0是一个功能正确的协议，但并非人人都能满足其性能，rdt3.0的核心问题是其为停等协议，会遭到带宽利用率底下。</p>
+<p>解决这种性能问题的一个简单方法是：不使用停等方式运行，运行发送方发送多个分组而无需等待确认。流水线技术可对可靠数据传输协议带来如下影响：</p>
+<ol>
+<li>必须增加序号范围。</li>
+<li>协议的发送方与接收方必须缓存多个分组，发送方最低限度应当缓存那些已经发送但未确认的分组。</li>
+<li>所需序号范围和对缓冲的要求取决于数据传输协议处理丢失、损坏以及过度延时分组的方式。</li>
+</ol>
+<p>解决流水线差错恢复有两种基本方法：回退N步（Go-Back-N）和选择重传。</p>
+<h3 id="回退N步"><a href="#回退N步" class="headerlink" title="回退N步"></a>回退N步</h3><p>在回退N步（GBN）中，允许发送方发送多个分组（当有时）而不需要等待确认，但也受限于在流水线中未确定的分组数不能超过某个最大允许数N。</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPNWZQ.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPNWZQ.png" alt="GBN"></a></p>
+<p>上图展示了GBN协议的序号范围。将基序号（base）定义为最早的未确认分组的序号，将下一个序号（nextseqnum）定义为最小的未使用（即下一个待发送）序号，则可将序号范围分成四部分。那些已发送而未被确认的分组的许可序号范围可以被看成是一个在序号范围内长度为N的窗口。随着协议的运行，该窗口向前滑动。N被称为窗口长度，GBN协议常被称为滑动窗口协议。</p>
+<p>一个分组的序号承载在分组首部的一个固定长度的字段中。如果字段长度是K，则序号范围是[0,2^k-1]。所有涉及序号的运算必须使用摸2^k运算。</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPafCn.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPafCn.png" alt="GBN FSM"></a></p>
+<p>对于发送方来说：首先上层调用时，判断是否是超过了N，如果没有，则发送数据，并且判断该发送是否为唯一一个未被确认的发送，如果是，启动计时器。而后更新nextseqnum，如果超过N了，则拒绝发送数据。当收到ACK时，ACK传递的编号是接收方已确定接收到的值。此时即可更新base值。如果更新后的base值与nextseqnum值一致，说明所有传输的分组都已经确认了，此时关闭计时器，否则重新开始计时。当计时器超时时，将base到nextseqnum-1之间已经传输的数据重传。其他情况忽略（不采取动作）。</p>
+<p>对于接收方来说：当接收到数据且没有被损坏且是期望到底的组，就接收该组，并发送ACK数据，报告已经接收到的组编号到了哪，并将期望到达的组编号加一。因此对于接收方来说，其期望数据是按序到达的，如果无效将导致发送方的重传。其他情况下，将发送之前的ACK确认信息。</p>
+<p>GBN期望传输时是有序到达的，该方法的优点是：接收方缓存简单，接收方不用缓冲任何失序分组。因此，虽然发送方必须维护窗口的上下边界及nextseqnum在该串口的位置，但接收方只需要维护下一个按序接收的分组序号（exceptedseqnum）。该方法的缺点是：随后对该分组的重传也许会丢失或出错，因此甚至需要更多的重传。</p>
+<h3 id="选择重传"><a href="#选择重传" class="headerlink" title="选择重传"></a>选择重传</h3><p>选择重传（SR）协议通过让发送方仅重传那些它怀疑在接收方出错（即丢失或受损）的分组而避免不必要的重传。</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPB0Ig.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPB0Ig.png" alt="SR"></a></p>
+<p>SR发送方所采取的各种动作：</p>
+<ol>
+<li>从上层收到数据：当从上层收到数据时，SR发送方检测下一个可用于该分组的序号，如果序号在发送方的窗口内，则将数据打包并发送，否则像GBN一样，要么返回上层要么缓冲起来。</li>
+<li>超时：定时器再次被用来防止超时，不过对于每个分组必须用于自己的逻辑定时器。因为超时后只能发送一个分组。</li>
+<li>收到ACK。如果收到ACK，且该分组在窗口内，则SR发送方将那个被确定的分组标记为已接收。如果该分组等于send_base，则窗口基序号向前移动到具有最小序号的未确定分组处。如果窗口移动了，并且有序号落在窗口内的未发送分组，则发送该分组。</li>
+</ol>
+<p>SR接收方所采取的各种动作：</p>
+<ol>
+<li>序号在[rcv_base, rcv_base+N-1]内的分组被正确接收。此时，收到的窗口落在接收方的窗口内，一个选择ACK分组被回送给发送方。如果该分组是以前没有收到的分组，则被缓存。如果该分组序号等于接收窗口的基序号rcv_base，则该分组以及以前缓冲的序号连续的分组（起始于rcv_base）交付给上层。然后，接收窗口按向上交付的分组数量向前移动。</li>
+<li>序号在[rcv_base-N, rev_base-1]内的数据被正确接收到。此时说明之前对该序号分组的ACK未被发生方正确接收，此时必须产生一个ACK信号。</li>
+<li>其他情况，忽略该分组。</li>
+</ol>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPrqUO.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPrqUO.png" alt="SR"></a></p>
+<p>上图展示了一个SR的实例。</p>
+<p>对SR协议来说，发送方与接收方的窗口并不总是一致。当我们面对有限序号实现时，不同步的窗口将会导致严重后果。如，对于一个有4个分组序号0,1,2,3的有限范围且窗口长度为3，假定发送了分组0到2，接收方也正确接收了它们。此时接收窗口落到了4,5,6个分组上，其序号为3,0,1。此时考虑两种情况，情况1如下图a，对前三个分组的ACK丢失，发送方要重传这些分组，因此接收方下一步要接收序号0的分组，即第一个发送分组的拷贝。第二种情况如下图b所示，前三个分组被正确交付，因此发送方向前移动窗口并发送4,5,6个分组，其序号是3,0,1。序号3的分组丢失，但序号0的分组到达。</p>
+<p><a href="https://s2.ax1x.com/2019/12/24/lPrbVK.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/24/lPrbVK.png" alt="SR EX"></a></p>
+<p>上述两种情况对于接收者来说是无法分辨的。显然窗口大小是有限制的，实际窗口长度必须小于或等于序号空间大小的一半。</p>
+<p>下表展示了可靠数据传输机制及其用途的总结：</p>
+<table>
+<thead>
+<tr>
+<th align="left">机制</th>
+<th align="left">用途和说明</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">检验和</td>
+<td align="left">用于检测在一个传输分组的比特错误。</td>
+</tr>
+<tr>
+<td align="left">定时器</td>
+<td align="left">用于检测超时/重传一个分组，可能由于该分组（或其ACK）丢失，可能传输超时。</td>
+</tr>
+<tr>
+<td align="left">序号</td>
+<td align="left">用于从发送方流向接收方的数据分组按序排号。所接收分组的序号间的空隙可使该接收方检测出丢失的分组。具有相同序号的分组可使接收方检测出一个分组的冗余拷贝。</td>
+</tr>
+<tr>
+<td align="left">确认</td>
+<td align="left">接收方用于告知发送方一个分组或一组分组已经被正确地接收到。</td>
+</tr>
+<tr>
+<td align="left">否定确认</td>
+<td align="left">接收方用于告知发送方某个分组未被正确接收。</td>
+</tr>
+<tr>
+<td align="left">窗口、流水线</td>
+<td align="left">发送方也许被限制仅发送那些序号落在一个限定范围内的分组。通过允许一次发送多个分组但未被确认，发送方的利用率可在停等等操作模式的基础上增加。</td>
+</tr>
+</tbody></table>
+<h2 id="面向连接的运算：TCP"><a href="#面向连接的运算：TCP" class="headerlink" title="面向连接的运算：TCP"></a>面向连接的运算：TCP</h2><h3 id="TCP连接"><a href="#TCP连接" class="headerlink" title="TCP连接"></a>TCP连接</h3><p>TCP是面向连接的（connection-oriented），在进程间可以开始与另一个进程发送数据之前，这两个进程必须先相互“握手”，即互相发送预备字段，以建立确保数据传输的参数。作为TCP连接建立的一部分，连接的双方都会初始化与TCP连接相关的许多TCP状态变量。</p>
+<p>TCP协议只在端系统中运行，而不会在中间的网络元素（路由器和链路层交换机）中运行，所以网络元素不会维持TCP连接状态。</p>
+<p>TCP是全双工服务，也是点对点服务。在三次握手中，前两次不能存在有效载荷，第三次可以。</p>
+<p>对于发送方，TCP将数据引导到连接的发送缓存里，发送缓存是三次握手初期设置的缓存之一。TCP可以从缓存中取出并放入报文段中的数据数量受限于<strong>最大报文长度</strong>（Maximum Segment Size，MSS）。MSS通常根据最初确定的最大链路层长度（最大传输单元（MTU））来设置。设置该MSS要保证一个TCP报文段加上TCP/IP首部长度将适合单个链路层帧。</p>
+<p>TCP为每块数据配上一个TCP首部，从而形成TCP报文段。这些报文段传输给网络层，网络层将其分别封装进网络层IP数据报中。然后这些IP数据报被发送到网络中。当TCP在另一端接收到一个报文段后，该报文段的数据就被放入该TCP连接的缓存中。</p>
+<h3 id="TCP报文段结构"><a href="#TCP报文段结构" class="headerlink" title="TCP报文段结构"></a>TCP报文段结构</h3><p><a href="https://s2.ax1x.com/2019/12/25/lilwDA.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/25/lilwDA.png" alt="TCP packet struction"></a></p>
+<p>当TCP发送大文件时，通常是将该文件划分为长度为MSS的若干块。报文中除了包含源端口、目的端口、校验和等与UDP一致的，还包含部分其他数据：</p>
+<ol>
+<li>32比特的序号字段（sequence number）和32比特的确认字段（acknowledgment number）。提供可靠数据传输。</li>
+<li>16比特的接收窗口字段，用于流量控制。</li>
+<li>4比特的首部长度字段，指示了以32比特的字为单位的TCP首部长度。</li>
+<li>可选与变长的可选字段（options），该字段用于发送方与接收方协商最大报文长度（MSS）时，或在高速网络下用作窗口调节因子。</li>
+<li>6比特标志字段。ACK比特用于指示确认字段中的值是有效的，即该报文段包括一个对已被成功接收报文段的确认。RST、SYN和FIN用于连接建立和拆除。当PSH比特被设置时，指示接收方应该立即将数据交付给上层。URG比特用来指示报文段中存放着被发送端实体置为紧急的数据。当紧急数据存在并给出指向紧急数据尾的指针的时候，TCP必须通知接收端的上层实体。（实践中PSH、URG和紧急数据指针并没有使用）。</li>
+</ol>
+<h4 id="序号和确认号"><a href="#序号和确认号" class="headerlink" title="序号和确认号"></a>序号和确认号</h4><p>TCP把数据看成一个无结构的、有序的字节流，序号建立在传送的字节流之上，而不是建立在传送的报文段的序列上。一个报文段的序列号是该报文段首字节的字节流编号。</p>
+<p>TCP是双全工的，因此A向B传送的同时，也许同时接收B的数据（同一条TCP连接）。主机A填充进报文段的确认号是主机A期望从主机B收到的下一字节的序号，即可以看做当前A已经接收到的字节数减1，相当于在告诉B当前A已经确认接收到的数据。（这里说确认接收的数据和已经收到的数据其实不是很准确，因为不一定是从0开始的，而是按照一定方式就初始化开始的）。</p>
+<p>同时对于确认号来说，由于TCP是流水线传输，所以对于已经确认接收到的数据来说，可能中间部分没有收到，其前面的分组和后面都收到了，此时确认号是该流中至第一个丢失字节为止的字节，所以TCP被称为提供累积确认（cunulative acknowledgment）。对于失序到达的后面的数据，TCP也不会丢弃，而是缓冲下来。</p>
+<p>这里序号和确认号分别对于与发送方和接收方的序号，从初始化序号即可看出来。一条TCP连接的双方均可以随机选择初始序列号(目的是减少将那些人在网络中存在的来自两台主机之间先前已经终止的连接的报文段、误认为是这两台主机之间新建立连接所产生的有效报文段的可能性（可能碰巧与就连接使用相同的端口号）)。例如A初始序号为a，B初始序号为b，此时相当于B已经接收了a-1个数据，A已经接收了b-1个数据，因此A接下来要接收的数据是b，B接下来要接收的数据为a，因此A的确认号为b，B的确认号为a。</p>
+<p>如下例：</p>
+<p><a href="https://s2.ax1x.com/2019/12/25/liJI9P.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/25/liJI9P.png" alt="seq ack"></a></p>
+<p>上图中A的序号是42，B的序号是79。</p>
+<p>注意：对于发送方来说，发送完成后就要等待接收确认，对于接收方来说，接收到之后，即使自己没有要向发送方传递任何数据，也要发送一个确认报文。如上图的第三天报文。</p>
+<h3 id="往返时间的估计与超时"><a href="#往返时间的估计与超时" class="headerlink" title="往返时间的估计与超时"></a>往返时间的估计与超时</h3><p>与rdt3.0一样，TCP也使用超时/重传机制来处理报文段的丢失问题。</p>
+<h4 id="估计往返时间"><a href="#估计往返时间" class="headerlink" title="估计往返时间"></a>估计往返时间</h4><p>报文段样本RTT（表示为sampleRTT）就是从某报文段被发出到对该报文段被确认收到（收到ACK确认）之间的时间。大多数TCP实现仅在某个时刻做一次sampleRTT测量，而不是为每个发送的报文测量一个sampleRTT。即任意时刻，仅为一个已发送但目前尚未被确认的报文段估计sampleRTT，从而产生一个接近每个RTT的新sampleRTT值。另外，TCP绝不为已被重传的报文段计算sampleRTT。</p>
+<p>显然，sampleRTT值是一个随时间变化的值。TCP维持一个sampleRTT均值（称为EstimatedRTT）。一但获取新sampleRTT值就更新EstimatedRTT：<br>$$<br>EstimatedRTT = (1-\alpha)*EstimatedRTT + \alpha *SampleRTT<br>$$<br>$\alpha$一般取0.125。</p>
+<p>EstimatedRTT是一个sampleRTT的加权平均值，且越接近当前的采样，权重越大。</p>
+<p>除了定义估算RTT外，测量RTT的变化也是有价值的。RTT偏差DevRTT，用于估算sampleRTT一般会偏离EstimatedRTT的程度：<br>$$<br>DevRTT = (1-\beta) * DevRTT + \beta *|sampleRTT - EstimatedRTT|<br>$$<br>$\beta$一般取0.25。</p>
+<h4 id="设置和管理重传超时间隔"><a href="#设置和管理重传超时间隔" class="headerlink" title="设置和管理重传超时间隔"></a>设置和管理重传超时间隔</h4><p>超时间隔应该大于等于EstimatedRTT，否则会造成不必要的重传。超时间隔也不能大太多，否则当报文丢失时，TCP不能很快重传该报文，导致数据传输时延大。于是TCP超时间隔设置为：<br>$$<br>TimeoutInterval = EstimatedRTT + 4 * DevRTT<br>$$</p>
+<h3 id="可靠数据传输"><a href="#可靠数据传输" class="headerlink" title="可靠数据传输"></a>可靠数据传输</h3><p>TCP可靠传输服务确保一个进程从其接收缓存中读出的数据流是无损的、无间隔的、非冗余和按序的数据流。</p>
+<p>前面我们在SR中讲到的方法是使每一个报文和一个定时器关联，但定时器花销是是否大的，因此推荐的定时器管理是仅使用单一的定时器。</p>
+<p>下面给出TCP发送方高度简化的描述：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line">/假设发送方不受TCP流量和拥塞控制的限制, 来自上层的数据长度小于MSS,且数据传送只在一个方向进行. */</span><br><span class="line"></span><br><span class="line">loop(forever)</span><br><span class="line">&#123;</span><br><span class="line">	switch(event)</span><br><span class="line">	</span><br><span class="line">		event: data recieved from application above create TCP segment with sequence number NextSeqNum</span><br><span class="line">			if(timer currently not running)</span><br><span class="line">				strat timer</span><br><span class="line">			pass segment to IP</span><br><span class="line">			NextSeqNum = NextSeqNum+length(data)</span><br><span class="line">			break</span><br><span class="line">		</span><br><span class="line">		event: timer timeout</span><br><span class="line">			retransmit not-yet-acknowledged segment with samllest sequence number</span><br><span class="line">			start timer</span><br><span class="line">			break</span><br><span class="line">		</span><br><span class="line">		event : ACK received, with ACK field value of y</span><br><span class="line">			if(y &gt; SendBase)</span><br><span class="line">				SendBase = y</span><br><span class="line">				if(there are currently any not-yet-acknowledged segments)</span><br><span class="line">					start timer</span><br><span class="line">				break;</span><br><span class="line">		</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其中Nextseqnum被用来记录序号，SendBase是最小为被确认的字节的序号。</p>
+<h4 id="超时间隔加倍"><a href="#超时间隔加倍" class="headerlink" title="超时间隔加倍"></a>超时间隔加倍</h4><p>如前所述，TCP重传具有最小序号的还没被确认的报文段。只是每次TCP重传时都会将下一次的超时间隔设置为先前的两倍，而不是从EstimatedRTT和DevRTT推算出来的值。然而每当定时器在另外两个事件（即收到上层应用的数据和收到ACK）中任意一个启动时，TimeoutInterval由最近的EstimatedRTT值与DevRTT得到。</p>
+<p>这种修改提供了一个形式受限的拥塞控制。</p>
+<h4 id="快速重传"><a href="#快速重传" class="headerlink" title="快速重传"></a>快速重传</h4><p>超时触发重传存在的问题是超时周期可能相对较长。发送方通常可在超时时间之前通过注意所谓的冗余ACK来较好的检测到丢包情况。冗余ACK就是再次确认某个报文段的ACK，而发送方先前已经收到对该报文段的确认。</p>
+<p>下表总结了TCP接收方ACK的生成策略：</p>
+<table>
+<thead>
+<tr>
+<th align="left">事件</th>
+<th align="left">TCP接收方动作</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="left">具有所期望的按序报文段到达，所有在期望序号以前的数据都已经被确认</td>
+<td align="left">延迟的ACK，对另一个按序报文段的达到最多等待500ms，如果下一个报文段在这个时间间隔内没有达到，则发送一个ACK</td>
+</tr>
+<tr>
+<td align="left">具有所期望序号的按序报文段到达，另一个按序报文段等待ACK传输</td>
+<td align="left">立即发送单个累积ACK，以确认两个按序报文段。</td>
+</tr>
+<tr>
+<td align="left">比期望大的失序报文段到达，检测出现间隔</td>
+<td align="left">立即发送冗余ACK，指示下一个期待字节的序号（其为间隔的低端序号）</td>
+</tr>
+<tr>
+<td align="left">能部分或完全填充数据间隔的报文段到达</td>
+<td align="left">倘若该报文段起始于低端，立即发送ACK</td>
+</tr>
+</tbody></table>
+<p>因为发送方经常发送大量报文段，如果一个报文段丢失，就可能引起许多冗余ACK。如果TCP发送方接收到对相同数据的3个冗余ACK，它把这当成一种指示，说明在这个已被确认过三次的报文段之后的报文段已经丢失。因此，一旦收到3个冗余ACK，TCP就执行快速重传，即在该报文段超时之前重传。</p>
+<p>因此，可用下面的代码来替代之前的发送方部分代码：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">event : ACK received,wite ACK field value of y</span><br><span class="line">	if(y &gt;SendBase)</span><br><span class="line">	&#123;</span><br><span class="line">		SendBase = y</span><br><span class="line">		if(there are currently any not yet acknowledged segments)</span><br><span class="line">			start timer</span><br><span class="line">	&#125;</span><br><span class="line">	else&#123; /* y == SendBase, 即收到冗余ACK */</span><br><span class="line">		increment number of duplicate ACks received for y</span><br><span class="line">		if(number of duplicate ACKs received for y==3)</span><br><span class="line">		&#123;</span><br><span class="line">			/* TCP fast retransmit */</span><br><span class="line">			resend segment with sequence number y</span><br><span class="line">		&#125;</span><br><span class="line">		</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>TCP的差错恢复机制应该属于GBN和SR的混合体。</p>
+<h3 id="流量控制"><a href="#流量控制" class="headerlink" title="流量控制"></a>流量控制</h3><p>一条TCP连接每一测主机都为该连接设置了接收缓存。TCP提供了流量控制服务（flow-control service）以消除发送方使接收方缓存溢出的可能。该服务与拥塞控制不同。</p>
+<p>TCP通过让发送方维护一个称为接收窗口（receive window）的变量来提供流量控制。接收窗口用于给发送方一个指示——该接收方还有多少可用的缓存空间。由于TCP是双全工通信，在连接两端的发送方都各种维护一个接收窗口。假设主机A通过一条TCP连接向主机B发送一个大文件。主机B为该连接分配一个缓存区，用RevBuffer来表示其大小。主机上的应用进程不时地从该缓存中读取数据。同时定义如下变量：</p>
+<p>LastByteRead：主机B上的应用进程从缓存读出的数据流的最后一个字节的编号。</p>
+<p>LastByteRevd：从网络到达的并且已放入主机B接收缓存中的数据流的最后一个字节的编号。</p>
+<p>由于TCP不允许缓存溢出，因此：<br>$$<br>LastByteRecv - LastByteRead &lt;= RevBuffer<br>$$<br>接收窗口用rwnd表示，则：<br>$$<br>rwnd = RevBuffer - [LastByteRevd - LastByteRead]<br>$$<br>rwnd是动态变化的。</p>
+<p><a href="https://s2.ax1x.com/2019/12/25/liOh9g.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/25/liOh9g.png" alt="rwnd"></a></p>
+<p>主机B通过把当前rwnd值放到它发送给A的报文段接收窗口字段中，通知主机A它在该连接的缓存中还有多少可用空间。开始时，主机B设定rwnd = RevBuffer。为了实现这一点，主机B必须跟踪几个与连接有关的变量。</p>
+<p>主机A轮流跟踪两个变量，LastByteSent和LastByteAcked。这两个变量之间的差LastByteSend - LastByteAsked就是主机A发送到连接中但未被确认的数据量。将该数量限制在rwnd内就可以保证主机A不会使主机B的接收缓存溢出。所以：<br>$$<br>LastByteSent - LastByteAcked &lt;= rwnd<br>$$<br>但该方案存在一个问题。如果B的接收缓存已经满了，使得rwnd = 0。将rend告知A之后，假设主机B上没有任何数据要发送给A。此时，主机B上的应用进程将缓存清空，TCP并不向主机A发送任何带有rwnd的新报文。这样，主机A不可能知道主机B接收空间已经有新空间了，即主机A被阻塞而不能再发送数据。为了解决这个问题，TCP要求，当主机B接收窗口为0时，主机A继续发送只有一个字节数据的报文段。这些报文段将会被接收方确认。最终缓存将开始清空，并且确认报文里将包含一个非0的rwnd值。</p>
+<h3 id="TCP连接管理"><a href="#TCP连接管理" class="headerlink" title="TCP连接管理"></a>TCP连接管理</h3><p>现在来看一条TCP连接是如何建立的，假设运行在主机（客户）上的一个进程想要与另一台主机（服务器）上的进程建立一条连接。客户机会用下面方式与服务器建立连接：</p>
+<ol>
+<li>第一步：客户机的TCP首先向服务器端的TCP发送一个特殊的TCP报文段。该报文不包含应用层数据。但是报文段首部中的一个标志位（SYN比特）被置1.因此这个特殊报文段被称为SYN报文段。另外，客户机会随机初始化一个初始序号（client_isn），并将该编号置于起始的TCP SYN报文段的序号段中。该报文被封装在一个IP数据报中，并发送给服务器。</li>
+<li>第二步：一旦一个包含TCP SYN报文段的IP数据报到达服务器主机，服务器会从该数据报中提取出TCP SYN报文段，为该TCP连接分配TCP缓存和变量，并向该酷虎就TCP发送允许连接的报文段。（在完成三次握手的第三步之前分配资源，使得TCP易于受到被称为SYN洪泛的拒绝服务攻击）。这个运行连接的报文段也不包含应用层数据。但是该报文段首部包含3个重要信息。首先SYN比特被置1，其次该TCP报文段首部的确认号字段被设置为client_isn+1。最后，服务器选择自己的初始序号（server_isn)，并将其放置到TCP报文段首部的序号字段中。该报文被称为SYNACK报文段。</li>
+<li>在收到SYNACK报文段后，客户机也要为该连接分配缓存和变量。客户机向服务器发送另一个报文段，最后一个报文段对服务器的允许连接的报文段进行了确认（将值server_isn+1放置到TCP报文段首部的确认字段中来完成此项工作）。因为连接已经建立，该SYN比特被置为0。该三次握手的第三阶段可以在报文段负载中携带客户到服务器的数据。</li>
+</ol>
+<p>一旦建立连接后，就可以互相传输报文了，此时SYN都是0。</p>
+<p><a href="https://s2.ax1x.com/2019/12/25/lF9o79.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/25/lF9o79.png" alt="TCP three-way"></a></p>
+<p>下面我们再来看TCP如何终止连接。参与连接的任何一个都可以终止该连接。当连接结束后，主机中的资源将被释放。假如某个主机打算关闭连接，如下图。客户应用进程发出一个关闭连接命令。这会使客户TCP向服务器进程发送一个特殊的TCP报文段，该报文段首部FIN标志位被设置为1。当服务器接收到该该报文段后，就向发送方返回一个确认报文段。然后服务器就发送自己的终止报文，其FIN被置为1.最后，该客户机对这个服务器的终止报文进行确认。此时，在两台主机上用于该连接的所以资源都被释放了。</p>
+<p><a href="https://s2.ax1x.com/2019/12/25/lFPQVH.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/25/lFPQVH.png" alt="TCP fin"></a></p>
+<p>下图展示了客户TCP经典的TCP状态序列：</p>
+<p><a href="https://s2.ax1x.com/2019/12/25/lFPfZ4.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/25/lFPfZ4.png" alt="TCP state"></a></p>
+<p>其中在TIME_WAIT等待状态时，确定ACK丢失，TIME_WAIT状态使TCP客户重传最后的确认报文经过等待后，连接正式关闭，客户机所以资源包括端口号被释放。（等待时间取决于实现）</p>
+<p>下图为服务器端TCP经历的典型的TCP状态序列：</p>
+<p><a href="https://s2.ax1x.com/2019/12/25/lFitYR.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/25/lFitYR.png" alt="TCP state"></a></p>
+<h2 id="拥塞控制原理"><a href="#拥塞控制原理" class="headerlink" title="拥塞控制原理"></a>拥塞控制原理</h2><h3 id="拥塞原因与代价"><a href="#拥塞原因与代价" class="headerlink" title="拥塞原因与代价"></a>拥塞原因与代价</h3><h4 id="情况1：两个发送方和一台无穷大缓存的路由器"><a href="#情况1：两个发送方和一台无穷大缓存的路由器" class="headerlink" title="情况1：两个发送方和一台无穷大缓存的路由器"></a>情况1：两个发送方和一台无穷大缓存的路由器</h4><p>最简单的拥塞情况：两台主机（A和B）都有一条连接，且这两条连接共享源与目的地之间的单跳路由。此时限制只有共享式输出链路的容量。当两个主机传输的总速度超过链路的总容量，就会导致拥塞。</p>
+<h4 id="情况2：两个发送方和一台具有有限缓存的路由器"><a href="#情况2：两个发送方和一台具有有限缓存的路由器" class="headerlink" title="情况2：两个发送方和一台具有有限缓存的路由器"></a>情况2：两个发送方和一台具有有限缓存的路由器</h4><p>此时拥塞则有两部分组成，第一部分和情况1一样，两台主机所传输速度和，还有一个问题则是在有限缓存的路由器上存在丢包。丢包会加大两台主机传输速率，但造成更严重的拥塞和丢包。</p>
+<h4 id="情况3-4个发送方和具有有限缓存的多台路由器及多跳路径"><a href="#情况3-4个发送方和具有有限缓存的多台路由器及多跳路径" class="headerlink" title="情况3:4个发送方和具有有限缓存的多台路由器及多跳路径"></a>情况3:4个发送方和具有有限缓存的多台路由器及多跳路径</h4><p><a href="https://s2.ax1x.com/2019/12/26/lkhPNd.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/26/lkhPNd.png" alt="state 4"></a></p>
+<p>此时对于每一条传输路径来说，都经历两段。每段都有两条路径共享，而且共享段是其中一条路径的第一段，另一条路径的第二段。此时，往往作为第一段的那条路径会被优先满足，挤占掉作为第二段路径的那条路径。而被满足的那条路径到它的第二段路径时，又会被另一条路径挤占掉（因为在它的第二段里还存一个作为第一段的路径）。最终将会导致所以路径全部拥塞。</p>
+<h3 id="拥塞控制方法"><a href="#拥塞控制方法" class="headerlink" title="拥塞控制方法"></a>拥塞控制方法</h3><p>拥塞控制主要有两种方法：</p>
+<ol>
+<li>端到端拥塞控制：网络中存在拥塞，端系统必须通过对网络进行观察来推断。</li>
+<li>网络辅助的拥塞控制：在网络辅助的拥塞控制中，网络层构建（即路由器）向发送方提供关于网络中阻塞状态的显示反馈信息。</li>
+</ol>
+<h2 id="TCP拥塞控制"><a href="#TCP拥塞控制" class="headerlink" title="TCP拥塞控制"></a>TCP拥塞控制</h2><p>TCP所采取的方法是让每一个发送方根据所感知到的网络拥塞程度来限定其向连接发送的流量的速率。</p>
+<p>首先来看TCP如何限制向其连接发送流量的。运行在发送方的TCP拥塞控制机制跟踪一个额外的变量，即拥塞控制窗口（cwnd），它对一个TCP发送方能够向网络中发送流量的速率进行了限制，特别是，一个发送方中未被确认的数据量不会超过cwnd和rwnd中的最小值：<br>$$<br>LastByteSent - LastByteAcked &lt;= min{cwnd, rwnd}<br>$$<br>为了只关注与拥塞控制，下面的讨论假设rwnd足够大，我们可以忽略该值。因此，发送方发送速率大概是cwnd/RTT 字节/秒。通过调节cwnd值，我们可以调节其发送速率。</p>
+<p>下面考虑TCP发送方如何感知它与目的地之间的路径上出现了拥塞。我们将一个TCP发送方的“丢包事件”定义为：要么出现超时，要么收到来自接收方的3个冗余ACK。</p>
+<p>接下来考虑网络没有拥塞的情况，即没有出现丢包时间的情况。此时，TCP的发送方将收到对于以前未确认报文段的确认。TCP将这些确认到达作为一切正常的指示，并用来增加窗口的长度。因为TCP使用确认来触发（或计时）增大它的拥塞窗口长度，TCP被说成是自计时的。</p>
+<p>TCP对各个事件的指导性原则是：</p>
+<ol>
+<li>一个丢失的报文段意味着拥塞，因此丢失报文段时应该降低TCP发送方的速率。一个超时事件或者四个确认（一个初始ACK和三个冗余ACK）被解释为“丢包事件”的一种隐含的指示。</li>
+<li>一个确认报文段指示该网络正在向接收方交付发送方的报文段，因此，当对先前未确认报文段的确认到达时，能够增加发送方的速率。</li>
+<li>带宽探测：给定ACK指示源到目的地路径无拥塞，而丢包事件指示路径拥塞，TCP调节其传输速率的策略是增加其速率以响应到达的ACK，除非出现丢包事件，此时才减小传输速度。因为，为探测拥塞开始的速率，TCP发送方增加它的传输速率，从该速率后退，进而再次探测，可靠拥塞开始速率是否发送了变化。</li>
+</ol>
+<p>TCP拥塞控制算法包括三部分：慢启动；拥塞避免；快速恢复。</p>
+<h4 id="慢启动"><a href="#慢启动" class="headerlink" title="慢启动"></a>慢启动</h4><p>当一条TCP连接开始时，cwnd通常设置为一个MSS的较小值，TCP希望迅速找到可用带宽的数量。在慢启动状态，cwnd的值以1个MSS开始并且每当传输的报文段首次被确认就增加一个MSS。如下图所示，每过一个RTT，发送速率就翻倍，TCP发送速率起始慢，但在慢启动阶段以指数增长，</p>
+<p><a href="https://s2.ax1x.com/2019/12/26/lkbHEV.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/26/lkbHEV.png" alt="慢启动"></a></p>
+<p>慢启动结束的条件有多种。首先，如果存在一个由超时指示的丢包（即拥塞），TCP发送方将cwnd设置为1并重新开始慢启动过程。它还将第二个状态变量的值ssthresh（慢启动阈值）设置为cwnd/2，即当检测到拥塞时，将ssthresh置为拥塞窗口值的一半。慢启动的第二种方式是直接与ssthresh值相关联。因为当检测到拥塞时ssthresh设为cwnd的一半，当cwnd等于ssthresh值时，结束慢启动并将TCP转移到拥塞避免模式。最后一种方式是，如果检测到3个冗余ACK，TCP执行快速重传并进入快速恢复状态。</p>
+<h4 id="拥塞避免"><a href="#拥塞避免" class="headerlink" title="拥塞避免"></a>拥塞避免</h4><p>一旦进入拥塞避免，cwnd值大约是上次遇到拥塞时值的一半。此时采取比较保守的方法，每个RTT只将cwnd值加一（慢启动成倍）。通用方法是对于TCP发送方无论何时到达一个新的确认，就将cwnd增加一个MSS（MSS/cwnd）字节。例如，MSS是1460字节，cwnd是14600字节，则在一个RTT内发送10个报文。每个到达ACK增加1/10MSS的拥塞长度，这样在收到10个报文后，拥塞窗口就增加了一个MSS。</p>
+<p>结束拥塞避免的线性增长时机为：当出现超时时，TCP的拥塞避免算法行为与慢启动情况一致，cwnd被设置为1MSS。当出现3个冗余ACK事件时，网络继续从发送方向接收方交付报文段，因此TCP对这种丢包事件的行为，相比于超时指示的丢包应当不那么剧烈，此时TCP将cwnd的值减半，并且将ssthresh的值记录为cwnd的值的一半。接下来进入快速恢复状态。</p>
+<h4 id="快速恢复"><a href="#快速恢复" class="headerlink" title="快速恢复"></a>快速恢复</h4><p>在快速恢复中，对于引起TCP进入快速恢复状态的缺失报文段，对收到的每个冗余的ACK，cwnd的值增加一个MSS。最终，当对丢失报文段的一个ACK到达时，TCP进入拥塞避免状态。如果出现超时事件，快速恢复再执行如图在慢启动和拥塞避免中相同的动作，迁移到慢启动状态。</p>
+<p>下图展示了TCP的FSM：</p>
+<p><a href="https://s2.ax1x.com/2019/12/26/lkO0c4.png" target="_blank" rel="noopener"><img src="https://s2.ax1x.com/2019/12/26/lkO0c4.png" alt="TCP FSM"></a></p>
+<p>TCP拥塞控制常常被错误加性增、乘性减（AIMD）。</p>
+<p>TCP吞吐量公式，该公式作为丢包率L、往返时间RTT和最大报文段长度MSS的函数：<br>$$<br>一条连接的平均吞吐量 = \frac{1.22*MSS}{RTT\sqrt{L}}<br>$$</p>
+
+      
+    </div>
+
+    
+
+    
+    
+    
+
+    
+
+    
+      
+    
+    
+
+    
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/网络/" rel="tag"># -网络</a>
+          
+        </div>
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/learnlinux.html" rel="next" title="learnlinux">
+                <i class="fa fa-chevron-left"></i> learnlinux
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+  </div>
+
+
+          </div>
+          
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
+
+        </div>
+        
+          
+  
+  <div class="sidebar-toggle">
+    <div class="sidebar-toggle-line-wrap">
+      <span class="sidebar-toggle-line sidebar-toggle-line-first"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-middle"></span>
+      <span class="sidebar-toggle-line sidebar-toggle-line-last"></span>
+    </div>
+  </div>
+
+  <aside id="sidebar" class="sidebar">
+    <div class="sidebar-inner">
+
+      
+
+      
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
+
+      <div class="site-overview-wrap sidebar-panel">
+        <div class="site-overview">
+          <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
+            
+            <a href="/">
+              <img class="site-author-image" itemprop="image" src="/images/avatar.png" alt="冯宇康">
+            </a>    
+            
+              <p class="site-author-name" itemprop="name">冯宇康</p>
+              <div class="site-description motion-element" itemprop="description">起步晚，抓紧学，加油干！</div>
+          </div>
+
+          
+            <nav class="site-state motion-element">
+              
+                <div class="site-state-item site-state-posts">
+                
+                  <a href="/archives/">
+                
+                    <span class="site-state-item-count">9</span>
+                    <span class="site-state-item-name">日志</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-categories">
+                  
+                    
+                      <a href="/categories/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">10</span>
+                    <span class="site-state-item-name">分类</span>
+                  </a>
+                </div>
+              
+
+              
+                
+                
+                <div class="site-state-item site-state-tags">
+                  
+                    
+                      <a href="/tags/">
+                    
+                  
+                    
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                      
+                    
+                    <span class="site-state-item-count">7</span>
+                    <span class="site-state-item-name">标签</span>
+                  </a>
+                </div>
+              
+            </nav>
+          
+
+          
+
+          
+
+          
+            <div class="links-of-author motion-element">
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://github.com/finyorko" title="GitHub &rarr; https://github.com/finyorko" rel="noopener" target="_blank"><i class="fa fa-fw fa-globe"></i>GitHub</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="mailto:finyorko@163.com" title="E-Mail &rarr; mailto:finyorko@163.com" rel="noopener" target="_blank"><i class="fa fa-fw fa-envelope"></i>E-Mail</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://twitter.com/finyorko" title="Twitter &rarr; https://twitter.com/finyorko" rel="noopener" target="_blank"><i class="fa fa-fw fa-twitter"></i>Twitter</a>
+                </span>
+              
+                <span class="links-of-author-item">
+                  
+                  
+                    
+                  
+                  
+                    
+                  
+                  <a href="https://wpa.qq.com/msgrd?v=3&uin=820506576&site=qq&menu=yes" title="QQ &rarr; https://wpa.qq.com/msgrd?v=3&uin=820506576&site=qq&menu=yes" rel="noopener" target="_blank"><i class="fa fa-fw fa-qq"></i>QQ</a>
+                </span>
+              
+            </div>
+          
+
+          
+
+          
+          
+
+          
+            
+          
+          
+
+        </div>
+      </div>
+
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#计算机网络-自顶向下方法"><span class="nav-number">1.</span> <span class="nav-text">计算机网络-自顶向下方法</span></a></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第一章-计算机网络和因特网"><span class="nav-number">2.</span> <span class="nav-text">第一章　计算机网络和因特网</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#什么是因特网"><span class="nav-number">2.1.</span> <span class="nav-text">什么是因特网</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#具体构成描述"><span class="nav-number">2.1.1.</span> <span class="nav-text">具体构成描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#服务描述"><span class="nav-number">2.1.2.</span> <span class="nav-text">服务描述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#什么是协议"><span class="nav-number">2.1.3.</span> <span class="nav-text">什么是协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络边缘"><span class="nav-number">2.2.</span> <span class="nav-text">网络边缘</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#客户机和服务器程序"><span class="nav-number">2.2.1.</span> <span class="nav-text">客户机和服务器程序</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#接入网"><span class="nav-number">2.2.2.</span> <span class="nav-text">接入网</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#物理媒介"><span class="nav-number">2.2.3.</span> <span class="nav-text">物理媒介</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#网络核心"><span class="nav-number">2.3.</span> <span class="nav-text">网络核心</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#电路交换和分组交换"><span class="nav-number">2.3.1.</span> <span class="nav-text">电路交换和分组交换</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#电路交换网络中的多路复用"><span class="nav-number">2.3.1.1.</span> <span class="nav-text">电路交换网络中的多路复用</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#分组交换"><span class="nav-number">2.3.1.2.</span> <span class="nav-text">分组交换</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分组如何通过分组交换形成其通路"><span class="nav-number">2.3.2.</span> <span class="nav-text">分组如何通过分组交换形成其通路</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#ISP和因特网主干道"><span class="nav-number">2.3.3.</span> <span class="nav-text">ISP和因特网主干道</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#分组交换网中的时延、丢包和吞吐量"><span class="nav-number">2.4.</span> <span class="nav-text">分组交换网中的时延、丢包和吞吐量</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#时延概述"><span class="nav-number">2.4.1.</span> <span class="nav-text">时延概述</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#排队时延和丢包"><span class="nav-number">2.4.2.</span> <span class="nav-text">排队时延和丢包</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#端到端时延"><span class="nav-number">2.4.3.</span> <span class="nav-text">端到端时延</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#计算机网络中的吞吐量"><span class="nav-number">2.4.4.</span> <span class="nav-text">计算机网络中的吞吐量</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#协议层次和它们的服务模型"><span class="nav-number">2.5.</span> <span class="nav-text">协议层次和它们的服务模型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#分层的体系结构"><span class="nav-number">2.5.1.</span> <span class="nav-text">分层的体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#报文、报文段、数据报和帧"><span class="nav-number">2.5.2.</span> <span class="nav-text">报文、报文段、数据报和帧</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#攻击威胁下的网络"><span class="nav-number">2.6.</span> <span class="nav-text">攻击威胁下的网络</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#坏家伙能够经因特网将恶意软件放入你的计算机"><span class="nav-number">2.6.1.</span> <span class="nav-text">坏家伙能够经因特网将恶意软件放入你的计算机</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坏家伙能够攻击服务器和网络基础设施"><span class="nav-number">2.6.2.</span> <span class="nav-text">坏家伙能够攻击服务器和网络基础设施</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坏家伙能嗅探分组"><span class="nav-number">2.6.3.</span> <span class="nav-text">坏家伙能嗅探分组</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坏家伙能够伪装成你信任的人"><span class="nav-number">2.6.4.</span> <span class="nav-text">坏家伙能够伪装成你信任的人</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#坏家伙能够修改或删除报文"><span class="nav-number">2.6.5.</span> <span class="nav-text">坏家伙能够修改或删除报文</span></a></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第二章-应用层"><span class="nav-number">3.</span> <span class="nav-text">第二章 应用层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用层协议原理"><span class="nav-number">3.1.</span> <span class="nav-text">应用层协议原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#网络应用程序体系结构"><span class="nav-number">3.1.1.</span> <span class="nav-text">网络应用程序体系结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#进程通信"><span class="nav-number">3.1.2.</span> <span class="nav-text">进程通信</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可供应用程序使用的传输协议"><span class="nav-number">3.1.3.</span> <span class="nav-text">可供应用程序使用的传输协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#因特网的运输服务"><span class="nav-number">3.1.4.</span> <span class="nav-text">因特网的运输服务</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#TCP服务"><span class="nav-number">3.1.4.1.</span> <span class="nav-text">TCP服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#UDP服务"><span class="nav-number">3.1.4.2.</span> <span class="nav-text">UDP服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#因特网运输层不提供的服务"><span class="nav-number">3.1.4.3.</span> <span class="nav-text">因特网运输层不提供的服务</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#进程寻址"><span class="nav-number">3.1.4.4.</span> <span class="nav-text">进程寻址</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#应用层协议"><span class="nav-number">3.1.5.</span> <span class="nav-text">应用层协议</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Web应用与HTTP协议"><span class="nav-number">3.2.</span> <span class="nav-text">Web应用与HTTP协议</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP概况"><span class="nav-number">3.2.1.</span> <span class="nav-text">HTTP概况</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#非持久连接和持久连接"><span class="nav-number">3.2.2.</span> <span class="nav-text">非持久连接和持久连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#HTTP报文格式"><span class="nav-number">3.2.3.</span> <span class="nav-text">HTTP报文格式</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#请求报文"><span class="nav-number">3.2.3.1.</span> <span class="nav-text">请求报文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#HTTP响应报文"><span class="nav-number">3.2.3.2.</span> <span class="nav-text">HTTP响应报文</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#用于与服务器的交互：cookie"><span class="nav-number">3.2.4.</span> <span class="nav-text">用于与服务器的交互：cookie</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#Web缓存"><span class="nav-number">3.2.5.</span> <span class="nav-text">Web缓存</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#条件GET方法"><span class="nav-number">3.2.6.</span> <span class="nav-text">条件GET方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#文件传输协议：FTP"><span class="nav-number">3.3.</span> <span class="nav-text">文件传输协议：FTP</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#因特网中的电子邮件"><span class="nav-number">3.4.</span> <span class="nav-text">因特网中的电子邮件</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#SMTP"><span class="nav-number">3.4.1.</span> <span class="nav-text">SMTP</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#与HTTP的对比"><span class="nav-number">3.4.2.</span> <span class="nav-text">与HTTP的对比</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮件报文格式和MIME"><span class="nav-number">3.4.3.</span> <span class="nav-text">邮件报文格式和MIME</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#非ASCII码数据的MIME扩展"><span class="nav-number">3.4.3.1.</span> <span class="nav-text">非ASCII码数据的MIME扩展</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#接收的报文"><span class="nav-number">3.4.3.2.</span> <span class="nav-text">接收的报文</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#邮件访问协议"><span class="nav-number">3.4.4.</span> <span class="nav-text">邮件访问协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#POP3"><span class="nav-number">3.4.4.1.</span> <span class="nav-text">POP3</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#IMAP"><span class="nav-number">3.4.4.2.</span> <span class="nav-text">IMAP</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#DNS，因特网的目录服务"><span class="nav-number">3.5.</span> <span class="nav-text">DNS，因特网的目录服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS提供的服务"><span class="nav-number">3.5.1.</span> <span class="nav-text">DNS提供的服务</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS工作机理"><span class="nav-number">3.5.2.</span> <span class="nav-text">DNS工作机理</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#分布式、层次数据库"><span class="nav-number">3.5.2.1.</span> <span class="nav-text">分布式、层次数据库</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS缓存"><span class="nav-number">3.5.2.2.</span> <span class="nav-text">DNS缓存</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#DNS记录和报文"><span class="nav-number">3.5.3.</span> <span class="nav-text">DNS记录和报文</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#DNS报文"><span class="nav-number">3.5.3.1.</span> <span class="nav-text">DNS报文</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#在DNS数据库中插入记录"><span class="nav-number">3.5.3.2.</span> <span class="nav-text">在DNS数据库中插入记录</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#P2P应用"><span class="nav-number">3.6.</span> <span class="nav-text">P2P应用</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#P2P文件分发"><span class="nav-number">3.6.1.</span> <span class="nav-text">P2P文件分发</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#P2P体系结构的扩展性"><span class="nav-number">3.6.1.1.</span> <span class="nav-text">P2P体系结构的扩展性</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#BitTorrent"><span class="nav-number">3.6.1.2.</span> <span class="nav-text">BitTorrent</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#在P2P区域中搜索信息"><span class="nav-number">3.6.2.</span> <span class="nav-text">在P2P区域中搜索信息</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#集中式索引"><span class="nav-number">3.6.2.1.</span> <span class="nav-text">集中式索引</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#查询洪泛"><span class="nav-number">3.6.2.2.</span> <span class="nav-text">查询洪泛</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#层次覆盖"><span class="nav-number">3.6.2.3.</span> <span class="nav-text">层次覆盖</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#分布式散列表"><span class="nav-number">3.6.3.</span> <span class="nav-text">分布式散列表</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#环形DHT"><span class="nav-number">3.6.3.1.</span> <span class="nav-text">环形DHT</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#对等方的扰动"><span class="nav-number">3.6.3.2.</span> <span class="nav-text">对等方的扰动</span></a></li></ol></li></ol></li></ol></li><li class="nav-item nav-level-1"><a class="nav-link" href="#第三章-运输层"><span class="nav-number">4.</span> <span class="nav-text">第三章 运输层</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#概述和运输层服务"><span class="nav-number">4.1.</span> <span class="nav-text">概述和运输层服务</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#运输层与网络层的关系"><span class="nav-number">4.1.1.</span> <span class="nav-text">运输层与网络层的关系</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#因特网运输层概述"><span class="nav-number">4.1.2.</span> <span class="nav-text">因特网运输层概述</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#多路复用与多路分解"><span class="nav-number">4.2.</span> <span class="nav-text">多路复用与多路分解</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#无连接的多路复用与多路分解"><span class="nav-number">4.2.1.</span> <span class="nav-text">无连接的多路复用与多路分解</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#面向连接的多路复用与多路分解"><span class="nav-number">4.2.2.</span> <span class="nav-text">面向连接的多路复用与多路分解</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#无连接传输：UDP"><span class="nav-number">4.3.</span> <span class="nav-text">无连接传输：UDP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP报文段结构"><span class="nav-number">4.3.1.</span> <span class="nav-text">UDP报文段结构</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#UDP校验和"><span class="nav-number">4.3.2.</span> <span class="nav-text">UDP校验和</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#可靠数据传输原理"><span class="nav-number">4.4.</span> <span class="nav-text">可靠数据传输原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#构造可靠传输协议"><span class="nav-number">4.4.1.</span> <span class="nav-text">构造可靠传输协议</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#完全可靠信道上的可靠数据传输协议：rdt1-0"><span class="nav-number">4.4.1.1.</span> <span class="nav-text">完全可靠信道上的可靠数据传输协议：rdt1.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具有比特差错信道上的可靠数据传输：rdt2-0"><span class="nav-number">4.4.1.2.</span> <span class="nav-text">具有比特差错信道上的可靠数据传输：rdt2.0</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#具有比特差错的丢包信道上的可靠数据传输：rdt3-0"><span class="nav-number">4.4.1.3.</span> <span class="nav-text">具有比特差错的丢包信道上的可靠数据传输：rdt3.0</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流水线可靠数据传输协议"><span class="nav-number">4.4.2.</span> <span class="nav-text">流水线可靠数据传输协议</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#回退N步"><span class="nav-number">4.4.3.</span> <span class="nav-text">回退N步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#选择重传"><span class="nav-number">4.4.4.</span> <span class="nav-text">选择重传</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#面向连接的运算：TCP"><span class="nav-number">4.5.</span> <span class="nav-text">面向连接的运算：TCP</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接"><span class="nav-number">4.5.1.</span> <span class="nav-text">TCP连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP报文段结构"><span class="nav-number">4.5.2.</span> <span class="nav-text">TCP报文段结构</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#序号和确认号"><span class="nav-number">4.5.2.1.</span> <span class="nav-text">序号和确认号</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#往返时间的估计与超时"><span class="nav-number">4.5.3.</span> <span class="nav-text">往返时间的估计与超时</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#估计往返时间"><span class="nav-number">4.5.3.1.</span> <span class="nav-text">估计往返时间</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#设置和管理重传超时间隔"><span class="nav-number">4.5.3.2.</span> <span class="nav-text">设置和管理重传超时间隔</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#可靠数据传输"><span class="nav-number">4.5.4.</span> <span class="nav-text">可靠数据传输</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#超时间隔加倍"><span class="nav-number">4.5.4.1.</span> <span class="nav-text">超时间隔加倍</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速重传"><span class="nav-number">4.5.4.2.</span> <span class="nav-text">快速重传</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#流量控制"><span class="nav-number">4.5.5.</span> <span class="nav-text">流量控制</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#TCP连接管理"><span class="nav-number">4.5.6.</span> <span class="nav-text">TCP连接管理</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#拥塞控制原理"><span class="nav-number">4.6.</span> <span class="nav-text">拥塞控制原理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#拥塞原因与代价"><span class="nav-number">4.6.1.</span> <span class="nav-text">拥塞原因与代价</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#情况1：两个发送方和一台无穷大缓存的路由器"><span class="nav-number">4.6.1.1.</span> <span class="nav-text">情况1：两个发送方和一台无穷大缓存的路由器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#情况2：两个发送方和一台具有有限缓存的路由器"><span class="nav-number">4.6.1.2.</span> <span class="nav-text">情况2：两个发送方和一台具有有限缓存的路由器</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#情况3-4个发送方和具有有限缓存的多台路由器及多跳路径"><span class="nav-number">4.6.1.3.</span> <span class="nav-text">情况3:4个发送方和具有有限缓存的多台路由器及多跳路径</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#拥塞控制方法"><span class="nav-number">4.6.2.</span> <span class="nav-text">拥塞控制方法</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#TCP拥塞控制"><span class="nav-number">4.7.</span> <span class="nav-text">TCP拥塞控制</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#慢启动"><span class="nav-number">4.7.0.1.</span> <span class="nav-text">慢启动</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#拥塞避免"><span class="nav-number">4.7.0.2.</span> <span class="nav-text">拥塞避免</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#快速恢复"><span class="nav-number">4.7.0.3.</span> <span class="nav-text">快速恢复</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
+      
+
+      
+
+    </div>
+  </aside>
+  
+
+
+        
+      </div>
+    </main>
+
+    <footer id="footer" class="footer">
+      <div class="footer-inner">
+        <!--这一段统计主题中有，不用写了
+<script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+<div class="powered-by">
+<i class="fa fa-user-md"></i><span id="busuanzi_container_site_uv">
+  本站访客数:<span id="busuanzi_value_site_pv"></span>
+</span>
+-->
+
+<div class="copyright">&copy; <span itemprop="copyrightYear">2020</span>
+  <span class="with-love" id="animate">
+    <i class="fa fa-user"></i>
+  </span>
+  <span class="author" itemprop="copyrightHolder">冯宇康</span>
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-area-chart"></i>
+    </span>
+    
+    <span title="站点总字数">167k</span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+    <span class="post-meta-item-icon">
+      <i class="fa fa-coffee"></i>
+    </span>
+    
+    <span title="站点阅读时长">9:16</span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div class="theme-info">
+  <div class="powered-by"></div>
+  <span class="post-count">博客全站共83.0k字</span>
+</div>
+
+
+
+        
+<div class="busuanzi-count">
+  <script async src="https://busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-user"></i>
+    </span>
+    <span class="site-uv" title="总访客量">
+      <span class="busuanzi-value" id="busuanzi_value_site_uv"></span>
+    </span>
+  
+
+  
+    <span class="post-meta-divider">|</span>
+  
+
+  
+    <span class="post-meta-item-icon">
+      <i class="fa fa-eye"></i>
+    </span>
+    <span class="site-pv" title="总访问量">
+      <span class="busuanzi-value" id="busuanzi_value_site_pv"></span>
+    </span>
+  
+</div>
+
+
+
+
+
+
+
+
+
+        
+      </div>
+    </footer>
+
+    
+      <div class="back-to-top">
+        <i class="fa fa-arrow-up"></i>
+        
+          <span id="scrollpercent"><span>0</span>%</span>
+        
+      </div>
+    
+
+    
+
+    
+
+    
+  </div>
+
+  
+
+<script>
+  if (Object.prototype.toString.call(window.Promise) !== '[object Function]') {
+    window.Promise = null;
+  }
+</script>
+
+
+
+
+
+
+
+
+
+
+
+
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
+  <script src="/lib/jquery/index.js?v=2.1.3"></script>
+
+  
+  <script src="/lib/velocity/velocity.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/velocity/velocity.ui.min.js?v=1.2.1"></script>
+
+  
+  <script src="/lib/fancybox/source/jquery.fancybox.pack.js"></script>
+
+
+  
+
+
+  <script src="/js/utils.js?v=7.1.2"></script>
+
+  <script src="/js/motion.js?v=7.1.2"></script>
+
+
+
+  
+  
+
+
+  <script src="/js/affix.js?v=7.1.2"></script>
+
+  <script src="/js/schemes/pisces.js?v=7.1.2"></script>
+
+
+
+
+  
+  <script src="/js/scrollspy.js?v=7.1.2"></script>
+<script src="/js/post-details.js?v=7.1.2"></script>
+
+
+
+  
+
+
+  <script src="/js/next-boot.js?v=7.1.2"></script>
+
+
+  
+
+  
+
+  
+
+  
+  
+
+<script src="//cdn1.lncld.net/static/js/3.11.1/av-min.js"></script>
+
+
+
+<script src="//unpkg.com/valine/dist/Valine.min.js"></script>
+
+<script>
+  var GUEST = ['nick', 'mail', 'link'];
+  var guest = 'nick,mail,link';
+  guest = guest.split(',').filter(function(item) {
+    return GUEST.indexOf(item) > -1;
+  });
+  new Valine({
+    el: '#comments',
+    verify: false,
+    notify: false,
+    appId: 'yR2jYA50Lcm5MbiKDanQEpIy-gzGzoHsz',
+    appKey: 'CtNfG7dzENvr2ouIJNFPScVw',
+    placeholder: 'Just go go',
+    avatar: 'robohash',
+    meta: guest,
+    pageSize: '10' || 10,
+    visitor: false,
+    lang: '' || 'zh-cn'
+  });
+</script>
+
+
+
+
+  
+
+
+  
+  <script>
+    // Popup Window;
+    var isfetched = false;
+    var isXml = true;
+    // Search DB path;
+    var search_path = "search.xml";
+    if (search_path.length === 0) {
+      search_path = "search.xml";
+    } else if (/json$/i.test(search_path)) {
+      isXml = false;
+    }
+    var path = "/" + search_path;
+    // monitor main search box;
+
+    var onPopupClose = function (e) {
+      $('.popup').hide();
+      $('#local-search-input').val('');
+      $('.search-result-list').remove();
+      $('#no-result').remove();
+      $(".local-search-pop-overlay").remove();
+      $('body').css('overflow', '');
+    }
+
+    function proceedsearch() {
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay"></div>')
+        .css('overflow', 'hidden');
+      $('.search-popup-overlay').click(onPopupClose);
+      $('.popup').toggle();
+      var $localSearchInput = $('#local-search-input');
+      $localSearchInput.attr("autocapitalize", "none");
+      $localSearchInput.attr("autocorrect", "off");
+      $localSearchInput.focus();
+    }
+
+    // search function;
+    var searchFunc = function(path, search_id, content_id) {
+      'use strict';
+
+      // start loading animation
+      $("body")
+        .append('<div class="search-popup-overlay local-search-pop-overlay">' +
+          '<div id="search-loading-icon">' +
+          '<i class="fa fa-spinner fa-pulse fa-5x fa-fw"></i>' +
+          '</div>' +
+          '</div>')
+        .css('overflow', 'hidden');
+      $("#search-loading-icon").css('margin', '20% auto 0 auto').css('text-align', 'center');
+
+      
+
+      $.ajax({
+        url: path,
+        dataType: isXml ? "xml" : "json",
+        async: true,
+        success: function(res) {
+          // get the contents from search data
+          isfetched = true;
+          $('.popup').detach().appendTo('.header-inner');
+          var datas = isXml ? $("entry", res).map(function() {
+            return {
+              title: $("title", this).text(),
+              content: $("content",this).text(),
+              url: $("url" , this).text()
+            };
+          }).get() : res;
+          var input = document.getElementById(search_id);
+          var resultContent = document.getElementById(content_id);
+          var inputEventFunction = function() {
+            var searchText = input.value.trim().toLowerCase();
+            var keywords = searchText.split(/[\s\-]+/);
+            if (keywords.length > 1) {
+              keywords.push(searchText);
+            }
+            var resultItems = [];
+            if (searchText.length > 0) {
+              // perform local searching
+              datas.forEach(function(data) {
+                var isMatch = false;
+                var hitCount = 0;
+                var searchTextCount = 0;
+                var title = data.title.trim();
+                var titleInLowerCase = title.toLowerCase();
+                var content = data.content.trim().replace(/<[^>]+>/g,"");
+                
+                var contentInLowerCase = content.toLowerCase();
+                var articleUrl = decodeURIComponent(data.url).replace(/\/{2,}/g, '/');
+                var indexOfTitle = [];
+                var indexOfContent = [];
+                // only match articles with not empty titles
+                if(title != '') {
+                  keywords.forEach(function(keyword) {
+                    function getIndexByWord(word, text, caseSensitive) {
+                      var wordLen = word.length;
+                      if (wordLen === 0) {
+                        return [];
+                      }
+                      var startPosition = 0, position = [], index = [];
+                      if (!caseSensitive) {
+                        text = text.toLowerCase();
+                        word = word.toLowerCase();
+                      }
+                      while ((position = text.indexOf(word, startPosition)) > -1) {
+                        index.push({position: position, word: word});
+                        startPosition = position + wordLen;
+                      }
+                      return index;
+                    }
+
+                    indexOfTitle = indexOfTitle.concat(getIndexByWord(keyword, titleInLowerCase, false));
+                    indexOfContent = indexOfContent.concat(getIndexByWord(keyword, contentInLowerCase, false));
+                  });
+                  if (indexOfTitle.length > 0 || indexOfContent.length > 0) {
+                    isMatch = true;
+                    hitCount = indexOfTitle.length + indexOfContent.length;
+                  }
+                }
+
+                // show search results
+
+                if (isMatch) {
+                  // sort index by position of keyword
+
+                  [indexOfTitle, indexOfContent].forEach(function (index) {
+                    index.sort(function (itemLeft, itemRight) {
+                      if (itemRight.position !== itemLeft.position) {
+                        return itemRight.position - itemLeft.position;
+                      } else {
+                        return itemLeft.word.length - itemRight.word.length;
+                      }
+                    });
+                  });
+
+                  // merge hits into slices
+
+                  function mergeIntoSlice(text, start, end, index) {
+                    var item = index[index.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    var hits = [];
+                    var searchTextCountInSlice = 0;
+                    while (position + word.length <= end && index.length != 0) {
+                      if (word === searchText) {
+                        searchTextCountInSlice++;
+                      }
+                      hits.push({position: position, length: word.length});
+                      var wordEnd = position + word.length;
+
+                      // move to next position of hit
+
+                      index.pop();
+                      while (index.length != 0) {
+                        item = index[index.length - 1];
+                        position = item.position;
+                        word = item.word;
+                        if (wordEnd > position) {
+                          index.pop();
+                        } else {
+                          break;
+                        }
+                      }
+                    }
+                    searchTextCount += searchTextCountInSlice;
+                    return {
+                      hits: hits,
+                      start: start,
+                      end: end,
+                      searchTextCount: searchTextCountInSlice
+                    };
+                  }
+
+                  var slicesOfTitle = [];
+                  if (indexOfTitle.length != 0) {
+                    slicesOfTitle.push(mergeIntoSlice(title, 0, title.length, indexOfTitle));
+                  }
+
+                  var slicesOfContent = [];
+                  while (indexOfContent.length != 0) {
+                    var item = indexOfContent[indexOfContent.length - 1];
+                    var position = item.position;
+                    var word = item.word;
+                    // cut out 100 characters
+                    var start = position - 20;
+                    var end = position + 80;
+                    if(start < 0){
+                      start = 0;
+                    }
+                    if (end < position + word.length) {
+                      end = position + word.length;
+                    }
+                    if(end > content.length){
+                      end = content.length;
+                    }
+                    slicesOfContent.push(mergeIntoSlice(content, start, end, indexOfContent));
+                  }
+
+                  // sort slices in content by search text's count and hits' count
+
+                  slicesOfContent.sort(function (sliceLeft, sliceRight) {
+                    if (sliceLeft.searchTextCount !== sliceRight.searchTextCount) {
+                      return sliceRight.searchTextCount - sliceLeft.searchTextCount;
+                    } else if (sliceLeft.hits.length !== sliceRight.hits.length) {
+                      return sliceRight.hits.length - sliceLeft.hits.length;
+                    } else {
+                      return sliceLeft.start - sliceRight.start;
+                    }
+                  });
+
+                  // select top N slices in content
+
+                  var upperBound = parseInt('1');
+                  if (upperBound >= 0) {
+                    slicesOfContent = slicesOfContent.slice(0, upperBound);
+                  }
+
+                  // highlight title and content
+
+                  function highlightKeyword(text, slice) {
+                    var result = '';
+                    var prevEnd = slice.start;
+                    slice.hits.forEach(function (hit) {
+                      result += text.substring(prevEnd, hit.position);
+                      var end = hit.position + hit.length;
+                      result += '<b class="search-keyword">' + text.substring(hit.position, end) + '</b>';
+                      prevEnd = end;
+                    });
+                    result += text.substring(prevEnd, slice.end);
+                    return result;
+                  }
+
+                  var resultItem = '';
+
+                  if (slicesOfTitle.length != 0) {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + highlightKeyword(title, slicesOfTitle[0]) + "</a>";
+                  } else {
+                    resultItem += "<li><a href='" + articleUrl + "' class='search-result-title'>" + title + "</a>";
+                  }
+
+                  slicesOfContent.forEach(function (slice) {
+                    resultItem += "<a href='" + articleUrl + "'>" +
+                      "<p class=\"search-result\">" + highlightKeyword(content, slice) +
+                      "...</p>" + "</a>";
+                  });
+
+                  resultItem += "</li>";
+                  resultItems.push({
+                    item: resultItem,
+                    searchTextCount: searchTextCount,
+                    hitCount: hitCount,
+                    id: resultItems.length
+                  });
+                }
+              })
+            };
+            if (keywords.length === 1 && keywords[0] === "") {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-search fa-5x"></i></div>'
+            } else if (resultItems.length === 0) {
+              resultContent.innerHTML = '<div id="no-result"><i class="fa fa-frown-o fa-5x"></i></div>'
+            } else {
+              resultItems.sort(function (resultLeft, resultRight) {
+                if (resultLeft.searchTextCount !== resultRight.searchTextCount) {
+                  return resultRight.searchTextCount - resultLeft.searchTextCount;
+                } else if (resultLeft.hitCount !== resultRight.hitCount) {
+                  return resultRight.hitCount - resultLeft.hitCount;
+                } else {
+                  return resultRight.id - resultLeft.id;
+                }
+              });
+              var searchResultList = '<ul class=\"search-result-list\">';
+              resultItems.forEach(function (result) {
+                searchResultList += result.item;
+              })
+              searchResultList += "</ul>";
+              resultContent.innerHTML = searchResultList;
+            }
+          }
+
+          if ('auto' === 'auto') {
+            input.addEventListener('input', inputEventFunction);
+          } else {
+            $('.search-icon').click(inputEventFunction);
+            input.addEventListener('keypress', function (event) {
+              if (event.keyCode === 13) {
+                inputEventFunction();
+              }
+            });
+          }
+
+          // remove loading animation
+          $(".local-search-pop-overlay").remove();
+          $('body').css('overflow', '');
+
+          proceedsearch();
+        }
+      });
+    }
+
+    // handle and trigger popup window;
+    $('.popup-trigger').click(function(e) {
+      e.stopPropagation();
+      if (isfetched === false) {
+        searchFunc(path, 'local-search-input', 'local-search-result');
+      } else {
+        proceedsearch();
+      };
+    });
+
+    $('.popup-btn-close').click(onPopupClose);
+    $('.popup').click(function(e){
+      e.stopPropagation();
+    });
+    $(document).on('keyup', function (event) {
+      var shouldDismissSearchPopup = event.which === 27 &&
+        $('.search-popup').is(':visible');
+      if (shouldDismissSearchPopup) {
+        onPopupClose();
+      }
+    });
+  </script>
+
+
+
+
+
+  
+
+  
+
+  
+  
+
+  
+  
+
+  
+    
+      <script type="text/x-mathjax-config">
+  
+
+  MathJax.Hub.Config({
+    tex2jax: {
+      inlineMath: [ ['$', '$'], ['\\(', '\\)'] ],
+      processEscapes: true,
+      skipTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+    },
+    TeX: {
+      
+      equationNumbers: {
+        autoNumber: 'AMS'
+      }
+    }
+  });
+  MathJax.Hub.Register.StartupHook('TeX Jax Ready', function() {
+    MathJax.InputJax.TeX.prefilterHooks.Add(function(data) {
+      if (data.display) {
+        var next = data.script.nextSibling;
+        while (next && next.nodeName.toLowerCase() === '#text') { next = next.nextSibling }
+        if (next && next.nodeName.toLowerCase() === 'br') { next.parentNode.removeChild(next) }
+      }
+    });
+  });
+</script>
+
+<script type="text/x-mathjax-config">
+  MathJax.Hub.Queue(function() {
+    var all = MathJax.Hub.getAllJax(), i;
+    for (i = 0; i < all.length; i += 1) {
+      document.getElementById(all[i].inputID + '-Frame').parentNode.className += ' has-jax';
+    }
+  });
+</script>
+<script src="//cdn.jsdelivr.net/npm/mathjax@2/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    
+  
+
+
+  
+
+  
+
+  
+  <script>
+    (function(){
+      var bp = document.createElement('script');
+      var curProtocol = window.location.protocol.split(':')[0];
+      bp.src = (curProtocol === 'https') ? 'https://zz.bdstatic.com/linksubmit/push.js' : 'http://push.zhanzhang.baidu.com/push.js';
+      var s = document.getElementsByTagName("script")[0];
+      s.parentNode.insertBefore(bp, s);
+    })();
+  </script>
+
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+<script>
+  $('.highlight').not('.gist .highlight').each(function(i, e) {
+    var $wrap = $('<div>').addClass('highlight-wrap');
+    $(e).after($wrap);
+    $wrap.append($('<button>').addClass('copy-btn').append('复制').on('click', function(e) {
+      var code = $(this).parent().find('.code').find('.line').map(function(i, e) {
+        return $(e).text();
+      }).toArray().join('\n');
+      var ta = document.createElement('textarea');
+      var yPosition = window.pageYOffset || document.documentElement.scrollTop;
+      ta.style.top = yPosition + 'px'; // Prevent page scroll
+      ta.style.position = 'absolute';
+      ta.style.opacity = '0';
+      ta.readOnly = true;
+      ta.value = code;
+      document.body.appendChild(ta);
+      const selection = document.getSelection();
+      const selected = selection.rangeCount > 0 ? selection.getRangeAt(0) : false;
+      ta.select();
+      ta.setSelectionRange(0, code.length);
+      ta.readOnly = false;
+      var result = document.execCommand('copy');
+      
+        if (result) $(this).text('复制成功');
+        else $(this).text('复制失败');
+      
+      ta.blur(); // For iOS
+      $(this).blur();
+      if (selected) {
+        selection.removeAllRanges();
+        selection.addRange(selected);
+      }
+    })).on('mouseleave', function(e) {
+      var $b = $(this).find('.copy-btn');
+      setTimeout(function() {
+        $b.text('复制');
+      }, 300);
+    }).append(e);
+  })
+</script>
+
+
+  
+
+  
+
+  
+ <script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+ 
+
+</body>
+</html>
